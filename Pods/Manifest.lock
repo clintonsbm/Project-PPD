@@ -1,0 +1,30 @@
+PODS:
+  - NVActivityIndicatorView (4.6.1):
+    - NVActivityIndicatorView/Presenter (= 4.6.1)
+  - NVActivityIndicatorView/Presenter (4.6.1)
+  - SCLAlertView (0.8)
+  - Socket.IO-Client-Swift (14.0.0):
+    - Starscream (~> 3.0.6)
+  - Starscream (3.0.6)
+
+DEPENDENCIES:
+  - NVActivityIndicatorView
+  - SCLAlertView
+  - Socket.IO-Client-Swift (~> 14.0.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - NVActivityIndicatorView
+    - SCLAlertView
+    - Socket.IO-Client-Swift
+    - Starscream
+
+SPEC CHECKSUMS:
+  NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
+  Socket.IO-Client-Swift: 21e6a8a23a7d367d5ddfab6cbbd3c679cf3c25d6
+  Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
+
+PODFILE CHECKSUM: 22d374919b98f6d3f96f3825072681ec685b9b98
+
+COCOAPODS: 1.5.3

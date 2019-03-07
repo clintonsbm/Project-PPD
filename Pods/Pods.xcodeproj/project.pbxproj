@@ -1,0 +1,1456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0250367B9C6A10F20A3EFA4C38993F5A /* NVActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97324B10F394357EEC57E728DF0AB13F /* NVActivityIndicatorPresenter.swift */; };
+		06C67BCBA6A874BD3880821F5DBB0A89 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5714CF930F89123A5D48D76276283BED /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */; };
+		0A049810D911F2BE93DBB6DED9F85F9E /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0352082D36D216E6ED1912A311801B /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift */; };
+		0A62F6A01C461B24742ABD4452678DE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BE681E245491D178275E7C3B70C021 /* Foundation.framework */; };
+		11C8277029A99DD899665FCACC6559F7 /* Socket.IO-Client-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F752209081420A19F0F4EBCAFE4C6388 /* Socket.IO-Client-Swift-dummy.m */; };
+		173B2AB93E6069FDDF700BA452E92999 /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE8E6472457F6C8D62598DD7A7DAA3 /* NVActivityIndicatorAnimationBallZigZag.swift */; };
+		1CCA2CC08B56677769B7D77A8BBB68B9 /* SocketEngineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41CB09EFCF649302DF9C7DF3655FC02 /* SocketEngineClient.swift */; };
+		1F12EC96F2ABE587211047F96DFA7E4C /* SocketEnginePacketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00578D48F46E5FD253FA43C38B74F1 /* SocketEnginePacketType.swift */; };
+		1F24EC855DDC4D8FB26355FB90E38DAA /* SocketIOClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92306822DD289DBD49F348BC052A039 /* SocketIOClientSpec.swift */; };
+		241D8706075A6FB075A5CFA2E60873C2 /* NVActivityIndicatorAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246C2B18424B7F9CB041097AFD4C1B1D /* NVActivityIndicatorAnimationDelegate.swift */; };
+		2463DE0CC30C2416411B471BC5C212E4 /* SSLSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EC124910522CCBCD09BD02A2965EB3 /* SSLSecurity.swift */; };
+		294E54C2F064E420252BC02E9E693C0B /* NVActivityIndicatorAnimationOrbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AAE9FAEC593A56AF0E7BD50484716A /* NVActivityIndicatorAnimationOrbit.swift */; };
+		31E92A24B75F5F942EEA06A235236456 /* SSLSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10961FB62B6F349A5BCB93D5B38365 /* SSLSecurity.swift */; };
+		31EBE2B525DD2947882DE8491B1B0573 /* SocketManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBA534E015532691A183729F9393358 /* SocketManagerSpec.swift */; };
+		36D249D21D037500F20EA66941AFB165 /* SocketLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A21C1C077FBBBD163F3863888D17A3 /* SocketLogger.swift */; };
+		3BB7737D1AFDED41F90C79EB8DE80FE8 /* NVActivityIndicatorView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDEE5D650909D416B33CF96D189EB6A /* NVActivityIndicatorView-dummy.m */; };
+		3DDA9AC778332AD5C791AB22D387B251 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941B96FD4D636CF68B5976382D79DD19 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */; };
+		3EA01D63D0204092024D113ADC9B4C26 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81852C3048081DB58CDF21144C3CB439 /* NVActivityIndicatorAnimationBallGridPulse.swift */; };
+		3EFF959AB4062C01BC15EE926E2DF098 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561C802DA156D7DC327B622C4B1BFEAE /* SocketManager.swift */; };
+		4305F2A2732FEDDE2F390F8304C723FC /* SocketIOStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7061EB65F032B4ECE0126E0C34F17B /* SocketIOStatus.swift */; };
+		4627514B91BB62D72A69C79D1C8F5CA8 /* SocketIOClientOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E2CB60E269BEBDAAE7706434C3909C /* SocketIOClientOption.swift */; };
+		478D927565C9922FD7CFDE8520D87D81 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989BC5B3478D807F95E85D95BC380087 /* NVActivityIndicatorAnimationBallBeat.swift */; };
+		4933AF1BA8184D6DD29CFCDD86291817 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF683B675996881557702ED8C1C1CD27 /* Starscream.framework */; };
+		4E8F9B0F535F34A47D1E01B5008D88DF /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FB069FE1467F15CF9A63C51C8B1227 /* NVActivityIndicatorAnimationBallClipRotate.swift */; };
+		4F7AB1D7316D3B8C31208ABF2D73CC31 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675EBDDD63FBBAC293EA5B19AD4E288D /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */; };
+		53F1C3093A17BF73042AF4BAB0E6B030 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1009ECBD9E5B8DE6F8A3E23B46413F /* NVActivityIndicatorAnimationBallRotateChase.swift */; };
+		547FD24D18F637E68341E9F714B8D173 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80B64B1207659C9883039987A33A12 /* NVActivityIndicatorAnimationBallScaleMultiple.swift */; };
+		5623CB10580033F357E78D7E6D86F811 /* SCLAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A554C9577A74098BEB771A9E917302CA /* SCLAlertView-dummy.m */; };
+		570D148EA5586DD12C3D905DF5BD0CE0 /* SocketEnginePollable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9E90233B0AF31C340867F2A8E69C1C /* SocketEnginePollable.swift */; };
+		5BAA2E8935DDC767AA844976A263A145 /* NVActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086D56EE2621D44017AEA7BDADE8CEC5 /* NVActivityIndicatorShape.swift */; };
+		5C078EA2CEB5E412ABBAA171FCD4CE1A /* SocketIOClientConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91355D7D4CB323ACEBA238ABFAE81EB /* SocketIOClientConfiguration.swift */; };
+		5DCAE6B70121FFEFA47B0A623777F1AE /* NVActivityIndicatorAnimationPacman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD80B37462AC1CBE6B3B0436C4F6B1A /* NVActivityIndicatorAnimationPacman.swift */; };
+		601D6E7FBF5B1FAB3B55B885131BECF4 /* SocketAckEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5A4CE456B77385785C04263A9273E /* SocketAckEmitter.swift */; };
+		6552CAEB9AA077C793B8FA13C1B49B2F /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C97AAAF6D8DE6AECAFBC00E9F33EC9C /* NVActivityIndicatorAnimationSquareSpin.swift */; };
+		6A0BB21F82E342EC6809AA0F45BA4FFE /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84E306E159C882E4D77FF6F5072C9D /* NVActivityIndicatorAnimationCubeTransition.swift */; };
+		6D9E875CB4DA5D24A9FB51A6E70A079F /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285C5993E6745A3C8933BEE065F68E2 /* Compression.swift */; };
+		6F4AF5FFDA9C9955803CDEBCF9C2FA5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BE681E245491D178275E7C3B70C021 /* Foundation.framework */; };
+		6F5B5B6646C8F7D9B6574FCC7CBF62CE /* SocketEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697A10F482FB15655BA538ECFC8530B /* SocketEngine.swift */; };
+		7056AD6E8676C1D600CD3E0F66642078 /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69B024F5C94A0FBC4F28DCE34597651 /* NVActivityIndicatorAnimationLineScaleParty.swift */; };
+		71734AC4FE7D42D2087361E9E826834C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8569A1C6DA86A055ABC08B3DF3C41FA6 /* UIKit.framework */; };
+		7507E89370CA52DA96E6B4516C0FB5D2 /* SocketAnyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46022D7F67D3AA0C3844DB82AF19838A /* SocketAnyEvent.swift */; };
+		759757524FF111AEFBB5E236A3D19749 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF2AE8CC693C57E5AAA78CF64F5D3EB /* NVActivityIndicatorAnimationBallPulseRise.swift */; };
+		784708BBECB561B3319073D4A60A851E /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0480C0DC40F1B7BBD7BB78467066FE4 /* NVActivityIndicatorAnimationBallPulseSync.swift */; };
+		7949D5ED0732724A40FFB84172833146 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F365CB1770A488123DC1ECD6D7581B1E /* WebSocket.swift */; };
+		7C0A63CAE4A3DFEB5FF026A2501D86EB /* NVActivityIndicatorViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516C8EB52349AB80015F0698C67761E4 /* NVActivityIndicatorViewable.swift */; };
+		7E827949633FFF0BFB3EA0AB00E7981E /* NVActivityIndicatorAnimationBallDoubleBounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD80DEE935017AE87C107EDDA63338B8 /* NVActivityIndicatorAnimationBallDoubleBounce.swift */; };
+		82862AA4EC1076A840182E5C0271BF0E /* NVActivityIndicatorView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BBF198ABBD5CBDAE246E45FAAAD19FD /* NVActivityIndicatorView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87F34F8961C6C5A82D03627E43907EED /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A907EB58B80F1098AA39861EDBF06C /* NVActivityIndicatorAnimationAudioEqualizer.swift */; };
+		88C546770279761A8EB932E1FC115A76 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4933DD136C0D5A123B8DEBECC05DB1 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */; };
+		8B0F802D373D0E0BD16E3CB3B22A0257 /* SocketStringReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E4E93759B47187D0425BDBDAA74A1F /* SocketStringReader.swift */; };
+		8EADD7052A765D8ADCF99EE25E96CBF5 /* SocketExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBEE31BCB21AB1DD4C42219ADCA9D6 /* SocketExtensions.swift */; };
+		9AEFF9ACA2571EA98EF8A91F67DED965 /* SocketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD375A7F58798F71D453A0F4AD041F3 /* SocketTypes.swift */; };
+		A8BB65903664144DCD775401DCAC5EED /* SocketEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2915FE70A0FFE3524CDBE60C58856400 /* SocketEventHandler.swift */; };
+		AA8D577AD879869775634DA8CC5189DA /* Starscream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B0BA8840AF51C70724449CA05744C9 /* Starscream-dummy.m */; };
+		AED2B7562F01ACC08CEC008855D42816 /* SocketEngineSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB9E9E9D20775B7D0A465CFC550A2D6 /* SocketEngineSpec.swift */; };
+		B1E1EDC556868A7080B921574F5E69FA /* Starscream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B84C8691EAE7F670279BD823108B72BD /* Starscream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2D7A6A7350799DDDF2AC0FB9445A6FE /* SocketEngineWebsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C0C8A15A8E32FE09B508247DFB1C9 /* SocketEngineWebsocket.swift */; };
+		B720FB6A76350F4B8CE3ABEF570EC197 /* SocketPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F1ABEAB206C7CABDB45E8A2465DFBA /* SocketPacket.swift */; };
+		B7DD9E55C13191ABF50159BFF1964F76 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D8E94B31B3BCDBEFF7C2CEFE7BEA0D /* NVActivityIndicatorAnimationBallRotate.swift */; };
+		B8758A76C8A5C97E972480FD7A77F809 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BE681E245491D178275E7C3B70C021 /* Foundation.framework */; };
+		BABDEEA0E400185112FC54048CFAEE33 /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59C66F40F97971A8934D706A7CD702 /* NVActivityIndicatorAnimationBallGridBeat.swift */; };
+		BBE0890CA1E7E3C13426610AAA119F43 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B43DC904135D9CF7E149FA1C298F4 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift */; };
+		BC110F9F3DE714F21F8DC2F83E099143 /* SSLClientCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146FD50BF27B086E1750AEB41BAC09C4 /* SSLClientCertificate.swift */; };
+		BCEB4C9446ABB25222D5B92640214B11 /* SCLAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53108C20CBEB0F717D08E170687FEDC7 /* SCLAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3CDFE14B71893B7CB729FE8CD774898 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D902095E98A0B84130AEC28AE33DA4D /* NVActivityIndicatorAnimationBallClipRotatePulse.swift */; };
+		C824FCCE95EA6179468BABC05555A25B /* SocketRawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045076FAD7B8E291CA70505EB5B9CF79 /* SocketRawView.swift */; };
+		CE4A42C71FB0A896E776CF9EC7BB1509 /* NVActivityIndicatorAnimationCircleStrokeSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCACE5EC0503A81B4C4757F81628E49 /* NVActivityIndicatorAnimationCircleStrokeSpin.swift */; };
+		D37527398E12D52F839C0C9973775170 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7282F8A9E9F368C1B439C900597DF1A /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */; };
+		D38B7844BB5E179AB653102430112F55 /* NVActivityIndicatorAnimationBallScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = E279C9B50394C45F2FB65B06615BF408 /* NVActivityIndicatorAnimationBallScale.swift */; };
+		D4BAC92C5766CB1150FBA291FCCD8273 /* Pods-SocketIOPPDProject-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 585D62A5B59DF6EA9C2F80E8D5EFD6CD /* Pods-SocketIOPPDProject-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4D704B301D6939EEF8821460B780CF6 /* SocketAckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8E3BEE6F53B27F0F3BABCD17FE7E3 /* SocketAckManager.swift */; };
+		D5E044D8443D80A34DF2626AFB87FF73 /* NVActivityIndicatorAnimationLineScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1CBA0AFE378CB40BC19191A4C55287 /* NVActivityIndicatorAnimationLineScale.swift */; };
+		D62F3F1D3C2FEF3FF373FC98C9EE38E9 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC137BF06FA0E0C1892D3C71F8FD86B /* NVActivityIndicatorAnimationBallPulse.swift */; };
+		D7939CCB7D607B840E329C823E3C719C /* NVActivityIndicatorAnimationBlank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CA5445EDEE9223F4B17E06F1B00B64 /* NVActivityIndicatorAnimationBlank.swift */; };
+		D99471B6CA02EE977F97ACF6588860F4 /* Socket.IO-Client-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F5BCD675EE9DE3E9CB8B44389C6C61E5 /* Socket.IO-Client-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB1E9B160B4DBD103B933A5619F5ABE5 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B0F06201887447B268481DB1440C33 /* NVActivityIndicatorAnimationBallTrianglePath.swift */; };
+		DDE307664FA93D696E71ADD1D74C7F37 /* NVActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B404A9DADEEA0EFFA2ADCA778BDA7FE5 /* NVActivityIndicatorView.swift */; };
+		E307BED12A40BB9ABCE87E5A673D090F /* Pods-SocketIOPPDProject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31510FE46E4B6E6141C26540F854A637 /* Pods-SocketIOPPDProject-dummy.m */; };
+		E48A784AD37F1763146B97462B0904BF /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938B0C9BD9EE560D940F424D84AFD2DD /* SCLAlertView.swift */; };
+		E5BA1F99FF60783C7AF53B917E1103E6 /* SocketParsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82DFE76F5025C7525468516365DC1D /* SocketParsable.swift */; };
+		E85C43B65C95128C5BDA0F48599FEE35 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1542559CD8877999333292FDE3592281 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */; };
+		EA2DA91D33FC951D0B134E9EBD494ED8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BE681E245491D178275E7C3B70C021 /* Foundation.framework */; };
+		EE3B61C220B8763CCA08E7149204CB93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BE681E245491D178275E7C3B70C021 /* Foundation.framework */; };
+		EF0663D5BA2E8FB924DFFF9D6A21960E /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B397488CACC8A690189CC4D3D64AE30D /* SocketIOClient.swift */; };
+		F47C7B7A22E39AEFC60CDC340315787A /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C64791D76A4656E7A38350CD33BC75 /* NVActivityIndicatorAnimationBallScaleRipple.swift */; };
+		F492284C62C0495545BABE40262B82A8 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045FF13758D4EA12AB15854A424B21A1 /* SCLExtensions.swift */; };
+		F93A7D854E9DE74090AE78651377004B /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001AFDE5C1700FA992BDD28BC4C6F3A /* NVActivityIndicatorAnimationLineScalePulseOut.swift */; };
+		FB131729142F17BF9DB8D2EA110EC4D4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4A9870C8802936FF10BED8206DDEA4 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D8BB8DA45503FE84CF9F0902665F7DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54B1439EA0C8737E1BAF1F8CEF27B62C;
+			remoteInfo = NVActivityIndicatorView;
+		};
+		608410804AFFEF78C66409424BF38BFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A8520D6578DB27115BFE5707A160B3B;
+			remoteInfo = SCLAlertView;
+		};
+		9DCD730F31E8975BB408D6881458D1BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73377670A7A232201857038AF0858027;
+			remoteInfo = "Socket.IO-Client-Swift";
+		};
+		FDEA85C01F8609E4302CB0C77A55BAC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5BC2CB67888A52708A542F50D2EBD84;
+			remoteInfo = Starscream;
+		};
+		FE4B402EB99826002D62D1FA8079F0E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5BC2CB67888A52708A542F50D2EBD84;
+			remoteInfo = Starscream;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		045076FAD7B8E291CA70505EB5B9CF79 /* SocketRawView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketRawView.swift; path = Source/SocketIO/Client/SocketRawView.swift; sourceTree = "<group>"; };
+		045FF13758D4EA12AB15854A424B21A1 /* SCLExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLExtensions.swift; path = SCLAlertView/SCLExtensions.swift; sourceTree = "<group>"; };
+		086D56EE2621D44017AEA7BDADE8CEC5 /* NVActivityIndicatorShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorShape.swift; path = Source/NVActivityIndicatorView/NVActivityIndicatorShape.swift; sourceTree = "<group>"; };
+		08A8E3BEE6F53B27F0F3BABCD17FE7E3 /* SocketAckManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketAckManager.swift; path = Source/SocketIO/Ack/SocketAckManager.swift; sourceTree = "<group>"; };
+		0A7061EB65F032B4ECE0126E0C34F17B /* SocketIOStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOStatus.swift; path = Source/SocketIO/Client/SocketIOStatus.swift; sourceTree = "<group>"; };
+		0C4933DD136C0D5A123B8DEBECC05DB1 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationSemiCircleSpin.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationSemiCircleSpin.swift; sourceTree = "<group>"; };
+		0D5DBE99E8D7D080D564A34F7E1B0F95 /* NVActivityIndicatorView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NVActivityIndicatorView.xcconfig; sourceTree = "<group>"; };
+		0DCACE5EC0503A81B4C4757F81628E49 /* NVActivityIndicatorAnimationCircleStrokeSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationCircleStrokeSpin.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationCircleStrokeSpin.swift; sourceTree = "<group>"; };
+		0E4DF15EE8039495595BD986AF47B06E /* Starscream.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Starscream.xcconfig; sourceTree = "<group>"; };
+		0F84E306E159C882E4D77FF6F5072C9D /* NVActivityIndicatorAnimationCubeTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationCubeTransition.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationCubeTransition.swift; sourceTree = "<group>"; };
+		146FD50BF27B086E1750AEB41BAC09C4 /* SSLClientCertificate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLClientCertificate.swift; path = Sources/Starscream/SSLClientCertificate.swift; sourceTree = "<group>"; };
+		14AAE9FAEC593A56AF0E7BD50484716A /* NVActivityIndicatorAnimationOrbit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationOrbit.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationOrbit.swift; sourceTree = "<group>"; };
+		1542559CD8877999333292FDE3592281 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallZigZagDeflect.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallZigZagDeflect.swift; sourceTree = "<group>"; };
+		15FB069FE1467F15CF9A63C51C8B1227 /* NVActivityIndicatorAnimationBallClipRotate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallClipRotate.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallClipRotate.swift; sourceTree = "<group>"; };
+		160491542CBCBAE7D12AE4CBAD8B1531 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16C3729859C62B17D101DDB17A326E23 /* NVActivityIndicatorView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NVActivityIndicatorView.modulemap; sourceTree = "<group>"; };
+		1AA5A4CE456B77385785C04263A9273E /* SocketAckEmitter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketAckEmitter.swift; path = Source/SocketIO/Ack/SocketAckEmitter.swift; sourceTree = "<group>"; };
+		1BA1FA01165917C556CDFC4F8E6FB18E /* Pods-SocketIOPPDProject.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SocketIOPPDProject.modulemap"; sourceTree = "<group>"; };
+		1C59C66F40F97971A8934D706A7CD702 /* NVActivityIndicatorAnimationBallGridBeat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallGridBeat.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallGridBeat.swift; sourceTree = "<group>"; };
+		1D902095E98A0B84130AEC28AE33DA4D /* NVActivityIndicatorAnimationBallClipRotatePulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallClipRotatePulse.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallClipRotatePulse.swift; sourceTree = "<group>"; };
+		24390EFD555DD124430DFF9724065945 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		246C2B18424B7F9CB041097AFD4C1B1D /* NVActivityIndicatorAnimationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationDelegate.swift; path = Source/NVActivityIndicatorView/NVActivityIndicatorAnimationDelegate.swift; sourceTree = "<group>"; };
+		2915FE70A0FFE3524CDBE60C58856400 /* SocketEventHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEventHandler.swift; path = Source/SocketIO/Client/SocketEventHandler.swift; sourceTree = "<group>"; };
+		31510FE46E4B6E6141C26540F854A637 /* Pods-SocketIOPPDProject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SocketIOPPDProject-dummy.m"; sourceTree = "<group>"; };
+		32E2CB60E269BEBDAAE7706434C3909C /* SocketIOClientOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientOption.swift; path = Source/SocketIO/Client/SocketIOClientOption.swift; sourceTree = "<group>"; };
+		32EA93D47C9C357F9AC60D56D391862C /* Starscream-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-prefix.pch"; sourceTree = "<group>"; };
+		3A4C05645EA1B9C5F1749587B010266D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BDE8E6472457F6C8D62598DD7A7DAA3 /* NVActivityIndicatorAnimationBallZigZag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallZigZag.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallZigZag.swift; sourceTree = "<group>"; };
+		42E4E93759B47187D0425BDBDAA74A1F /* SocketStringReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketStringReader.swift; path = Source/SocketIO/Util/SocketStringReader.swift; sourceTree = "<group>"; };
+		45C64791D76A4656E7A38350CD33BC75 /* NVActivityIndicatorAnimationBallScaleRipple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScaleRipple.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleRipple.swift; sourceTree = "<group>"; };
+		46022D7F67D3AA0C3844DB82AF19838A /* SocketAnyEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketAnyEvent.swift; path = Source/SocketIO/Client/SocketAnyEvent.swift; sourceTree = "<group>"; };
+		46B0F06201887447B268481DB1440C33 /* NVActivityIndicatorAnimationBallTrianglePath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallTrianglePath.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallTrianglePath.swift; sourceTree = "<group>"; };
+		4A1009ECBD9E5B8DE6F8A3E23B46413F /* NVActivityIndicatorAnimationBallRotateChase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallRotateChase.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallRotateChase.swift; sourceTree = "<group>"; };
+		4AD80B37462AC1CBE6B3B0436C4F6B1A /* NVActivityIndicatorAnimationPacman.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationPacman.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationPacman.swift; sourceTree = "<group>"; };
+		4B1CBA0AFE378CB40BC19191A4C55287 /* NVActivityIndicatorAnimationLineScale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScale.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScale.swift; sourceTree = "<group>"; };
+		516C8EB52349AB80015F0698C67761E4 /* NVActivityIndicatorViewable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorViewable.swift; path = Source/NVActivityIndicatorView/Presenter/NVActivityIndicatorViewable.swift; sourceTree = "<group>"; };
+		520CDC921AB2DF4ADB4D007A889D639F /* SCLAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SCLAlertView.framework; path = SCLAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5285C5993E6745A3C8933BEE065F68E2 /* Compression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compression.swift; path = Sources/Starscream/Compression.swift; sourceTree = "<group>"; };
+		53108C20CBEB0F717D08E170687FEDC7 /* SCLAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-umbrella.h"; sourceTree = "<group>"; };
+		561C802DA156D7DC327B622C4B1BFEAE /* SocketManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketManager.swift; path = Source/SocketIO/Manager/SocketManager.swift; sourceTree = "<group>"; };
+		5643C58D5C173E9178159AA021BF2EC0 /* Pods-SocketIOPPDProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SocketIOPPDProject.release.xcconfig"; sourceTree = "<group>"; };
+		5714CF930F89123A5D48D76276283BED /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScalePulseOutRapid.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScalePulseOutRapid.swift; sourceTree = "<group>"; };
+		585D62A5B59DF6EA9C2F80E8D5EFD6CD /* Pods-SocketIOPPDProject-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SocketIOPPDProject-umbrella.h"; sourceTree = "<group>"; };
+		5BBF198ABBD5CBDAE246E45FAAAD19FD /* NVActivityIndicatorView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NVActivityIndicatorView-umbrella.h"; sourceTree = "<group>"; };
+		600673EEB66FAD3A75804F65EFF9ACB4 /* Starscream.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Starscream.modulemap; sourceTree = "<group>"; };
+		64EC124910522CCBCD09BD02A2965EB3 /* SSLSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLSecurity.swift; path = Source/SocketIO/Util/SSLSecurity.swift; sourceTree = "<group>"; };
+		675EBDDD63FBBAC293EA5B19AD4E288D /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScaleRippleMultiple.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleRippleMultiple.swift; sourceTree = "<group>"; };
+		69CA5445EDEE9223F4B17E06F1B00B64 /* NVActivityIndicatorAnimationBlank.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBlank.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBlank.swift; sourceTree = "<group>"; };
+		6A38F0DBB94512A377700EBCE86002AE /* Pods_SocketIOPPDProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SocketIOPPDProject.framework; path = "Pods-SocketIOPPDProject.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A4C0C8A15A8E32FE09B508247DFB1C9 /* SocketEngineWebsocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngineWebsocket.swift; path = Source/SocketIO/Engine/SocketEngineWebsocket.swift; sourceTree = "<group>"; };
+		7537F7DE0372AD4E82FA02E2225E1BC6 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NVActivityIndicatorView.framework; path = NVActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		770A544342FF73C7E060C1B143C80321 /* Socket.IO-Client-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Socket.IO-Client-Swift.xcconfig"; sourceTree = "<group>"; };
+		78A4E18B14A11F59AA91D19B464C1C5A /* Pods-SocketIOPPDProject-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SocketIOPPDProject-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7EB9E9E9D20775B7D0A465CFC550A2D6 /* SocketEngineSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngineSpec.swift; path = Source/SocketIO/Engine/SocketEngineSpec.swift; sourceTree = "<group>"; };
+		80A21C1C077FBBBD163F3863888D17A3 /* SocketLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketLogger.swift; path = Source/SocketIO/Util/SocketLogger.swift; sourceTree = "<group>"; };
+		81852C3048081DB58CDF21144C3CB439 /* NVActivityIndicatorAnimationBallGridPulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallGridPulse.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallGridPulse.swift; sourceTree = "<group>"; };
+		836B43DC904135D9CF7E149FA1C298F4 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallSpinFadeLoader.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallSpinFadeLoader.swift; sourceTree = "<group>"; };
+		8569A1C6DA86A055ABC08B3DF3C41FA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		8C97AAAF6D8DE6AECAFBC00E9F33EC9C /* NVActivityIndicatorAnimationSquareSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationSquareSpin.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationSquareSpin.swift; sourceTree = "<group>"; };
+		8CD375A7F58798F71D453A0F4AD041F3 /* SocketTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketTypes.swift; path = Source/SocketIO/Util/SocketTypes.swift; sourceTree = "<group>"; };
+		938B0C9BD9EE560D940F424D84AFD2DD /* SCLAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLAlertView.swift; path = SCLAlertView/SCLAlertView.swift; sourceTree = "<group>"; };
+		941B96FD4D636CF68B5976382D79DD19 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationTriangleSkewSpin.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationTriangleSkewSpin.swift; sourceTree = "<group>"; };
+		9697A10F482FB15655BA538ECFC8530B /* SocketEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngine.swift; path = Source/SocketIO/Engine/SocketEngine.swift; sourceTree = "<group>"; };
+		97324B10F394357EEC57E728DF0AB13F /* NVActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorPresenter.swift; path = Source/NVActivityIndicatorView/Presenter/NVActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
+		989BC5B3478D807F95E85D95BC380087 /* NVActivityIndicatorAnimationBallBeat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallBeat.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallBeat.swift; sourceTree = "<group>"; };
+		9B402BF02462C8E5C0F71B308B797844 /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Starscream.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BF10D3F1AFDC8847213FD9E54FEFB63 /* SocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SocketIO.framework; path = "Socket.IO-Client-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C4A9870C8802936FF10BED8206DDEA4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		A3BAED55148664B04089203C59FFFE52 /* SCLAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCLAlertView.xcconfig; sourceTree = "<group>"; };
+		A554C9577A74098BEB771A9E917302CA /* SCLAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCLAlertView-dummy.m"; sourceTree = "<group>"; };
+		A7917422A4C682DDD7C3DFC55F42D86A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8A907EB58B80F1098AA39861EDBF06C /* NVActivityIndicatorAnimationAudioEqualizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationAudioEqualizer.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationAudioEqualizer.swift; sourceTree = "<group>"; };
+		A91355D7D4CB323ACEBA238ABFAE81EB /* SocketIOClientConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientConfiguration.swift; path = Source/SocketIO/Client/SocketIOClientConfiguration.swift; sourceTree = "<group>"; };
+		A946AFFD3FAAF51EEA458C898012BE21 /* SCLAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-prefix.pch"; sourceTree = "<group>"; };
+		AA6908BE25FD314C7971E5FAFBC28771 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAF2AE8CC693C57E5AAA78CF64F5D3EB /* NVActivityIndicatorAnimationBallPulseRise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallPulseRise.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulseRise.swift; sourceTree = "<group>"; };
+		ABE7E991C238CAD745B2D3EBBC9E1402 /* Pods-SocketIOPPDProject-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SocketIOPPDProject-frameworks.sh"; sourceTree = "<group>"; };
+		AF683B675996881557702ED8C1C1CD27 /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF7A63CA0E9AB19877EE9AADCBD8CAF9 /* Pods-SocketIOPPDProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SocketIOPPDProject.debug.xcconfig"; sourceTree = "<group>"; };
+		AF80B64B1207659C9883039987A33A12 /* NVActivityIndicatorAnimationBallScaleMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScaleMultiple.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScaleMultiple.swift; sourceTree = "<group>"; };
+		B397488CACC8A690189CC4D3D64AE30D /* SocketIOClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClient.swift; path = Source/SocketIO/Client/SocketIOClient.swift; sourceTree = "<group>"; };
+		B404A9DADEEA0EFFA2ADCA778BDA7FE5 /* NVActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorView.swift; path = Source/NVActivityIndicatorView/NVActivityIndicatorView.swift; sourceTree = "<group>"; };
+		B41CB09EFCF649302DF9C7DF3655FC02 /* SocketEngineClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngineClient.swift; path = Source/SocketIO/Engine/SocketEngineClient.swift; sourceTree = "<group>"; };
+		B4CBEE31BCB21AB1DD4C42219ADCA9D6 /* SocketExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketExtensions.swift; path = Source/SocketIO/Util/SocketExtensions.swift; sourceTree = "<group>"; };
+		B5F1ABEAB206C7CABDB45E8A2465DFBA /* SocketPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketPacket.swift; path = Source/SocketIO/Parse/SocketPacket.swift; sourceTree = "<group>"; };
+		B84C8691EAE7F670279BD823108B72BD /* Starscream-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-umbrella.h"; sourceTree = "<group>"; };
+		B9B0BA8840AF51C70724449CA05744C9 /* Starscream-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Starscream-dummy.m"; sourceTree = "<group>"; };
+		BB0B8BF03D58F5661BEC075900BC4790 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD80DEE935017AE87C107EDDA63338B8 /* NVActivityIndicatorAnimationBallDoubleBounce.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallDoubleBounce.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallDoubleBounce.swift; sourceTree = "<group>"; };
+		C767902B8B42C3C979B107EB620870B2 /* Socket.IO-Client-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Socket.IO-Client-Swift.modulemap"; sourceTree = "<group>"; };
+		C7D8E94B31B3BCDBEFF7C2CEFE7BEA0D /* NVActivityIndicatorAnimationBallRotate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallRotate.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallRotate.swift; sourceTree = "<group>"; };
+		CA9E90233B0AF31C340867F2A8E69C1C /* SocketEnginePollable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEnginePollable.swift; path = Source/SocketIO/Engine/SocketEnginePollable.swift; sourceTree = "<group>"; };
+		CCC137BF06FA0E0C1892D3C71F8FD86B /* NVActivityIndicatorAnimationBallPulse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallPulse.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulse.swift; sourceTree = "<group>"; };
+		CCDEE5D650909D416B33CF96D189EB6A /* NVActivityIndicatorView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NVActivityIndicatorView-dummy.m"; sourceTree = "<group>"; };
+		CFBCA911682853A6AEFAA0533A814F6E /* NVActivityIndicatorView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NVActivityIndicatorView-prefix.pch"; sourceTree = "<group>"; };
+		D0480C0DC40F1B7BBD7BB78467066FE4 /* NVActivityIndicatorAnimationBallPulseSync.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallPulseSync.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulseSync.swift; sourceTree = "<group>"; };
+		D3BE681E245491D178275E7C3B70C021 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D92306822DD289DBD49F348BC052A039 /* SocketIOClientSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientSpec.swift; path = Source/SocketIO/Client/SocketIOClientSpec.swift; sourceTree = "<group>"; };
+		DC274EE5930D17CB40C7B174E8E4BB8B /* Pods-SocketIOPPDProject-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SocketIOPPDProject-resources.sh"; sourceTree = "<group>"; };
+		DDBA534E015532691A183729F9393358 /* SocketManagerSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketManagerSpec.swift; path = Source/SocketIO/Manager/SocketManagerSpec.swift; sourceTree = "<group>"; };
+		DE0352082D36D216E6ED1912A311801B /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallClipRotateMultiple.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallClipRotateMultiple.swift; sourceTree = "<group>"; };
+		E279C9B50394C45F2FB65B06615BF408 /* NVActivityIndicatorAnimationBallScale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallScale.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallScale.swift; sourceTree = "<group>"; };
+		E3A9FBD4F79256205832EB4465219155 /* SCLAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SCLAlertView.modulemap; sourceTree = "<group>"; };
+		E69B024F5C94A0FBC4F28DCE34597651 /* NVActivityIndicatorAnimationLineScaleParty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScaleParty.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScaleParty.swift; sourceTree = "<group>"; };
+		E6DFED9EC59A6027D795545E0233D5A6 /* Pods-SocketIOPPDProject-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SocketIOPPDProject-acknowledgements.plist"; sourceTree = "<group>"; };
+		E7282F8A9E9F368C1B439C900597DF1A /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineSpinFadeLoader.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineSpinFadeLoader.swift; sourceTree = "<group>"; };
+		EA82DFE76F5025C7525468516365DC1D /* SocketParsable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketParsable.swift; path = Source/SocketIO/Parse/SocketParsable.swift; sourceTree = "<group>"; };
+		ED0BDFCC6FE34B79334C7437709CD16D /* Socket.IO-Client-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Socket.IO-Client-Swift-prefix.pch"; sourceTree = "<group>"; };
+		EF10961FB62B6F349A5BCB93D5B38365 /* SSLSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLSecurity.swift; path = Sources/Starscream/SSLSecurity.swift; sourceTree = "<group>"; };
+		F001AFDE5C1700FA992BDD28BC4C6F3A /* NVActivityIndicatorAnimationLineScalePulseOut.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationLineScalePulseOut.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationLineScalePulseOut.swift; sourceTree = "<group>"; };
+		F365CB1770A488123DC1ECD6D7581B1E /* WebSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = Sources/Starscream/WebSocket.swift; sourceTree = "<group>"; };
+		F5BCD675EE9DE3E9CB8B44389C6C61E5 /* Socket.IO-Client-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Socket.IO-Client-Swift-umbrella.h"; sourceTree = "<group>"; };
+		F752209081420A19F0F4EBCAFE4C6388 /* Socket.IO-Client-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Socket.IO-Client-Swift-dummy.m"; sourceTree = "<group>"; };
+		FF00578D48F46E5FD253FA43C38B74F1 /* SocketEnginePacketType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEnginePacketType.swift; path = Source/SocketIO/Engine/SocketEnginePacketType.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76C566E5069E812BF040BBB37D4552A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F4AF5FFDA9C9955803CDEBCF9C2FA5F /* Foundation.framework in Frameworks */,
+				4933AF1BA8184D6DD29CFCDD86291817 /* Starscream.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		907C9B6973FF982F5A728DCC26F74119 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2DA91D33FC951D0B134E9EBD494ED8 /* Foundation.framework in Frameworks */,
+				FB131729142F17BF9DB8D2EA110EC4D4 /* QuartzCore.framework in Frameworks */,
+				71734AC4FE7D42D2087361E9E826834C /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E38BE59D459A4234E5889933BC2C2E96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE3B61C220B8763CCA08E7149204CB93 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECD2AE665F2C0B1149579F282BCF4DA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8758A76C8A5C97E972480FD7A77F809 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBE3587CBC77E15F2ECAF80C9780DB90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A62F6A01C461B24742ABD4452678DE6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2528BC9E860AD1071991354CE14C87ED /* Starscream */ = {
+			isa = PBXGroup;
+			children = (
+				5285C5993E6745A3C8933BEE065F68E2 /* Compression.swift */,
+				146FD50BF27B086E1750AEB41BAC09C4 /* SSLClientCertificate.swift */,
+				EF10961FB62B6F349A5BCB93D5B38365 /* SSLSecurity.swift */,
+				F365CB1770A488123DC1ECD6D7581B1E /* WebSocket.swift */,
+				EA2DFAC6EBD91E60BE331BF97D2A5C93 /* Support Files */,
+			);
+			name = Starscream;
+			path = Starscream;
+			sourceTree = "<group>";
+		};
+		2962EFE543DB2DA72200B2AF9664FE03 /* NVActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				CB31209B9BC6D7F172B2F2E5D3DC6183 /* Presenter */,
+				621CDCF5B3F852C3B269836BBFFB5FEE /* Support Files */,
+			);
+			name = NVActivityIndicatorView;
+			path = NVActivityIndicatorView;
+			sourceTree = "<group>";
+		};
+		43F74333B8FE1D9943991D54020CE78A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF683B675996881557702ED8C1C1CD27 /* Starscream.framework */,
+				7886A28AB7DB5BBF694F367CBD443659 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BC116ECF44CAE5056ECAF245D1A10D0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A7917422A4C682DDD7C3DFC55F42D86A /* Info.plist */,
+				C767902B8B42C3C979B107EB620870B2 /* Socket.IO-Client-Swift.modulemap */,
+				770A544342FF73C7E060C1B143C80321 /* Socket.IO-Client-Swift.xcconfig */,
+				F752209081420A19F0F4EBCAFE4C6388 /* Socket.IO-Client-Swift-dummy.m */,
+				ED0BDFCC6FE34B79334C7437709CD16D /* Socket.IO-Client-Swift-prefix.pch */,
+				F5BCD675EE9DE3E9CB8B44389C6C61E5 /* Socket.IO-Client-Swift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Socket.IO-Client-Swift";
+			sourceTree = "<group>";
+		};
+		5FA910A911EB9291F6DFA35E57DF108B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7537F7DE0372AD4E82FA02E2225E1BC6 /* NVActivityIndicatorView.framework */,
+				6A38F0DBB94512A377700EBCE86002AE /* Pods_SocketIOPPDProject.framework */,
+				520CDC921AB2DF4ADB4D007A889D639F /* SCLAlertView.framework */,
+				9BF10D3F1AFDC8847213FD9E54FEFB63 /* SocketIO.framework */,
+				9B402BF02462C8E5C0F71B308B797844 /* Starscream.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		621CDCF5B3F852C3B269836BBFFB5FEE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A4C05645EA1B9C5F1749587B010266D /* Info.plist */,
+				16C3729859C62B17D101DDB17A326E23 /* NVActivityIndicatorView.modulemap */,
+				0D5DBE99E8D7D080D564A34F7E1B0F95 /* NVActivityIndicatorView.xcconfig */,
+				CCDEE5D650909D416B33CF96D189EB6A /* NVActivityIndicatorView-dummy.m */,
+				CFBCA911682853A6AEFAA0533A814F6E /* NVActivityIndicatorView-prefix.pch */,
+				5BBF198ABBD5CBDAE246E45FAAAD19FD /* NVActivityIndicatorView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/NVActivityIndicatorView";
+			sourceTree = "<group>";
+		};
+		6F4AE758EA97755215F8942749A0AB98 /* SCLAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				938B0C9BD9EE560D940F424D84AFD2DD /* SCLAlertView.swift */,
+				045FF13758D4EA12AB15854A424B21A1 /* SCLExtensions.swift */,
+				ECF1F42AC3F3C1EBD8131F38575B3EB5 /* Support Files */,
+			);
+			name = SCLAlertView;
+			path = SCLAlertView;
+			sourceTree = "<group>";
+		};
+		7886A28AB7DB5BBF694F367CBD443659 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D3BE681E245491D178275E7C3B70C021 /* Foundation.framework */,
+				9C4A9870C8802936FF10BED8206DDEA4 /* QuartzCore.framework */,
+				8569A1C6DA86A055ABC08B3DF3C41FA6 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		840F3D342E04DD54771555F65B507708 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2962EFE543DB2DA72200B2AF9664FE03 /* NVActivityIndicatorView */,
+				6F4AE758EA97755215F8942749A0AB98 /* SCLAlertView */,
+				C8677E57D72F17E7755C49F9A2338350 /* Socket.IO-Client-Swift */,
+				2528BC9E860AD1071991354CE14C87ED /* Starscream */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BE97E13426AFF5501D950F4A8A9AD533 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D657174FE143B19A53358648290D634D /* Pods-SocketIOPPDProject */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C8677E57D72F17E7755C49F9A2338350 /* Socket.IO-Client-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				1AA5A4CE456B77385785C04263A9273E /* SocketAckEmitter.swift */,
+				08A8E3BEE6F53B27F0F3BABCD17FE7E3 /* SocketAckManager.swift */,
+				46022D7F67D3AA0C3844DB82AF19838A /* SocketAnyEvent.swift */,
+				9697A10F482FB15655BA538ECFC8530B /* SocketEngine.swift */,
+				B41CB09EFCF649302DF9C7DF3655FC02 /* SocketEngineClient.swift */,
+				FF00578D48F46E5FD253FA43C38B74F1 /* SocketEnginePacketType.swift */,
+				CA9E90233B0AF31C340867F2A8E69C1C /* SocketEnginePollable.swift */,
+				7EB9E9E9D20775B7D0A465CFC550A2D6 /* SocketEngineSpec.swift */,
+				6A4C0C8A15A8E32FE09B508247DFB1C9 /* SocketEngineWebsocket.swift */,
+				2915FE70A0FFE3524CDBE60C58856400 /* SocketEventHandler.swift */,
+				B4CBEE31BCB21AB1DD4C42219ADCA9D6 /* SocketExtensions.swift */,
+				B397488CACC8A690189CC4D3D64AE30D /* SocketIOClient.swift */,
+				A91355D7D4CB323ACEBA238ABFAE81EB /* SocketIOClientConfiguration.swift */,
+				32E2CB60E269BEBDAAE7706434C3909C /* SocketIOClientOption.swift */,
+				D92306822DD289DBD49F348BC052A039 /* SocketIOClientSpec.swift */,
+				0A7061EB65F032B4ECE0126E0C34F17B /* SocketIOStatus.swift */,
+				80A21C1C077FBBBD163F3863888D17A3 /* SocketLogger.swift */,
+				561C802DA156D7DC327B622C4B1BFEAE /* SocketManager.swift */,
+				DDBA534E015532691A183729F9393358 /* SocketManagerSpec.swift */,
+				B5F1ABEAB206C7CABDB45E8A2465DFBA /* SocketPacket.swift */,
+				EA82DFE76F5025C7525468516365DC1D /* SocketParsable.swift */,
+				045076FAD7B8E291CA70505EB5B9CF79 /* SocketRawView.swift */,
+				42E4E93759B47187D0425BDBDAA74A1F /* SocketStringReader.swift */,
+				8CD375A7F58798F71D453A0F4AD041F3 /* SocketTypes.swift */,
+				64EC124910522CCBCD09BD02A2965EB3 /* SSLSecurity.swift */,
+				5BC116ECF44CAE5056ECAF245D1A10D0 /* Support Files */,
+			);
+			name = "Socket.IO-Client-Swift";
+			path = "Socket.IO-Client-Swift";
+			sourceTree = "<group>";
+		};
+		CB31209B9BC6D7F172B2F2E5D3DC6183 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A8A907EB58B80F1098AA39861EDBF06C /* NVActivityIndicatorAnimationAudioEqualizer.swift */,
+				989BC5B3478D807F95E85D95BC380087 /* NVActivityIndicatorAnimationBallBeat.swift */,
+				15FB069FE1467F15CF9A63C51C8B1227 /* NVActivityIndicatorAnimationBallClipRotate.swift */,
+				DE0352082D36D216E6ED1912A311801B /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift */,
+				1D902095E98A0B84130AEC28AE33DA4D /* NVActivityIndicatorAnimationBallClipRotatePulse.swift */,
+				BD80DEE935017AE87C107EDDA63338B8 /* NVActivityIndicatorAnimationBallDoubleBounce.swift */,
+				1C59C66F40F97971A8934D706A7CD702 /* NVActivityIndicatorAnimationBallGridBeat.swift */,
+				81852C3048081DB58CDF21144C3CB439 /* NVActivityIndicatorAnimationBallGridPulse.swift */,
+				CCC137BF06FA0E0C1892D3C71F8FD86B /* NVActivityIndicatorAnimationBallPulse.swift */,
+				AAF2AE8CC693C57E5AAA78CF64F5D3EB /* NVActivityIndicatorAnimationBallPulseRise.swift */,
+				D0480C0DC40F1B7BBD7BB78467066FE4 /* NVActivityIndicatorAnimationBallPulseSync.swift */,
+				C7D8E94B31B3BCDBEFF7C2CEFE7BEA0D /* NVActivityIndicatorAnimationBallRotate.swift */,
+				4A1009ECBD9E5B8DE6F8A3E23B46413F /* NVActivityIndicatorAnimationBallRotateChase.swift */,
+				E279C9B50394C45F2FB65B06615BF408 /* NVActivityIndicatorAnimationBallScale.swift */,
+				AF80B64B1207659C9883039987A33A12 /* NVActivityIndicatorAnimationBallScaleMultiple.swift */,
+				45C64791D76A4656E7A38350CD33BC75 /* NVActivityIndicatorAnimationBallScaleRipple.swift */,
+				675EBDDD63FBBAC293EA5B19AD4E288D /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */,
+				836B43DC904135D9CF7E149FA1C298F4 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift */,
+				46B0F06201887447B268481DB1440C33 /* NVActivityIndicatorAnimationBallTrianglePath.swift */,
+				3BDE8E6472457F6C8D62598DD7A7DAA3 /* NVActivityIndicatorAnimationBallZigZag.swift */,
+				1542559CD8877999333292FDE3592281 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */,
+				69CA5445EDEE9223F4B17E06F1B00B64 /* NVActivityIndicatorAnimationBlank.swift */,
+				0DCACE5EC0503A81B4C4757F81628E49 /* NVActivityIndicatorAnimationCircleStrokeSpin.swift */,
+				0F84E306E159C882E4D77FF6F5072C9D /* NVActivityIndicatorAnimationCubeTransition.swift */,
+				246C2B18424B7F9CB041097AFD4C1B1D /* NVActivityIndicatorAnimationDelegate.swift */,
+				4B1CBA0AFE378CB40BC19191A4C55287 /* NVActivityIndicatorAnimationLineScale.swift */,
+				E69B024F5C94A0FBC4F28DCE34597651 /* NVActivityIndicatorAnimationLineScaleParty.swift */,
+				F001AFDE5C1700FA992BDD28BC4C6F3A /* NVActivityIndicatorAnimationLineScalePulseOut.swift */,
+				5714CF930F89123A5D48D76276283BED /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */,
+				E7282F8A9E9F368C1B439C900597DF1A /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */,
+				14AAE9FAEC593A56AF0E7BD50484716A /* NVActivityIndicatorAnimationOrbit.swift */,
+				4AD80B37462AC1CBE6B3B0436C4F6B1A /* NVActivityIndicatorAnimationPacman.swift */,
+				0C4933DD136C0D5A123B8DEBECC05DB1 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */,
+				8C97AAAF6D8DE6AECAFBC00E9F33EC9C /* NVActivityIndicatorAnimationSquareSpin.swift */,
+				941B96FD4D636CF68B5976382D79DD19 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */,
+				97324B10F394357EEC57E728DF0AB13F /* NVActivityIndicatorPresenter.swift */,
+				086D56EE2621D44017AEA7BDADE8CEC5 /* NVActivityIndicatorShape.swift */,
+				B404A9DADEEA0EFFA2ADCA778BDA7FE5 /* NVActivityIndicatorView.swift */,
+				516C8EB52349AB80015F0698C67761E4 /* NVActivityIndicatorViewable.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				24390EFD555DD124430DFF9724065945 /* Podfile */,
+				43F74333B8FE1D9943991D54020CE78A /* Frameworks */,
+				840F3D342E04DD54771555F65B507708 /* Pods */,
+				5FA910A911EB9291F6DFA35E57DF108B /* Products */,
+				BE97E13426AFF5501D950F4A8A9AD533 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D657174FE143B19A53358648290D634D /* Pods-SocketIOPPDProject */ = {
+			isa = PBXGroup;
+			children = (
+				AA6908BE25FD314C7971E5FAFBC28771 /* Info.plist */,
+				1BA1FA01165917C556CDFC4F8E6FB18E /* Pods-SocketIOPPDProject.modulemap */,
+				78A4E18B14A11F59AA91D19B464C1C5A /* Pods-SocketIOPPDProject-acknowledgements.markdown */,
+				E6DFED9EC59A6027D795545E0233D5A6 /* Pods-SocketIOPPDProject-acknowledgements.plist */,
+				31510FE46E4B6E6141C26540F854A637 /* Pods-SocketIOPPDProject-dummy.m */,
+				ABE7E991C238CAD745B2D3EBBC9E1402 /* Pods-SocketIOPPDProject-frameworks.sh */,
+				DC274EE5930D17CB40C7B174E8E4BB8B /* Pods-SocketIOPPDProject-resources.sh */,
+				585D62A5B59DF6EA9C2F80E8D5EFD6CD /* Pods-SocketIOPPDProject-umbrella.h */,
+				AF7A63CA0E9AB19877EE9AADCBD8CAF9 /* Pods-SocketIOPPDProject.debug.xcconfig */,
+				5643C58D5C173E9178159AA021BF2EC0 /* Pods-SocketIOPPDProject.release.xcconfig */,
+			);
+			name = "Pods-SocketIOPPDProject";
+			path = "Target Support Files/Pods-SocketIOPPDProject";
+			sourceTree = "<group>";
+		};
+		EA2DFAC6EBD91E60BE331BF97D2A5C93 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB0B8BF03D58F5661BEC075900BC4790 /* Info.plist */,
+				600673EEB66FAD3A75804F65EFF9ACB4 /* Starscream.modulemap */,
+				0E4DF15EE8039495595BD986AF47B06E /* Starscream.xcconfig */,
+				B9B0BA8840AF51C70724449CA05744C9 /* Starscream-dummy.m */,
+				32EA93D47C9C357F9AC60D56D391862C /* Starscream-prefix.pch */,
+				B84C8691EAE7F670279BD823108B72BD /* Starscream-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Starscream";
+			sourceTree = "<group>";
+		};
+		ECF1F42AC3F3C1EBD8131F38575B3EB5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				160491542CBCBAE7D12AE4CBAD8B1531 /* Info.plist */,
+				E3A9FBD4F79256205832EB4465219155 /* SCLAlertView.modulemap */,
+				A3BAED55148664B04089203C59FFFE52 /* SCLAlertView.xcconfig */,
+				A554C9577A74098BEB771A9E917302CA /* SCLAlertView-dummy.m */,
+				A946AFFD3FAAF51EEA458C898012BE21 /* SCLAlertView-prefix.pch */,
+				53108C20CBEB0F717D08E170687FEDC7 /* SCLAlertView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SCLAlertView";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		87F88E66F630C6C6A975D690E2E33CB9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1E1EDC556868A7080B921574F5E69FA /* Starscream-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89747EA9173A4990E29CEF55E5C91D31 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D99471B6CA02EE977F97ACF6588860F4 /* Socket.IO-Client-Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBA127A071EA37D60F812AC037DBFE7A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4BAC92C5766CB1150FBA291FCCD8273 /* Pods-SocketIOPPDProject-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDAC34687EA5C0FC2B4B243079FE83B1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCEB4C9446ABB25222D5B92640214B11 /* SCLAlertView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEC613BE6ED85EFC030D23BED1A98A36 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82862AA4EC1076A840182E5C0271BF0E /* NVActivityIndicatorView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		27F0E5220DBB71CF246F67A1FA053C47 /* Pods-SocketIOPPDProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 942BCC6038D1E1BF02BCA5475F543D13 /* Build configuration list for PBXNativeTarget "Pods-SocketIOPPDProject" */;
+			buildPhases = (
+				CBA127A071EA37D60F812AC037DBFE7A /* Headers */,
+				49E177B905506DD917283AB39F72F7B4 /* Sources */,
+				FBE3587CBC77E15F2ECAF80C9780DB90 /* Frameworks */,
+				CEF623DD36D62DB0D18E9E43166C7F96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDD7E9394E0E3A96E26092F0B74178D3 /* PBXTargetDependency */,
+				2BB35A94402A76848C3388AF54FB0B9F /* PBXTargetDependency */,
+				1AD27C1A54E24B1C3C8449A0892CB52A /* PBXTargetDependency */,
+				CCCD3EA43F657F9E6B18B58CC1D5C42F /* PBXTargetDependency */,
+			);
+			name = "Pods-SocketIOPPDProject";
+			productName = "Pods-SocketIOPPDProject";
+			productReference = 6A38F0DBB94512A377700EBCE86002AE /* Pods_SocketIOPPDProject.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3A8520D6578DB27115BFE5707A160B3B /* SCLAlertView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0498575172841F8FAF1A54E919C588C /* Build configuration list for PBXNativeTarget "SCLAlertView" */;
+			buildPhases = (
+				CDAC34687EA5C0FC2B4B243079FE83B1 /* Headers */,
+				9B982938A252E8F7A36233823D036F42 /* Sources */,
+				E38BE59D459A4234E5889933BC2C2E96 /* Frameworks */,
+				6C325B9933C024987160AFF756C1F45D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SCLAlertView;
+			productName = SCLAlertView;
+			productReference = 520CDC921AB2DF4ADB4D007A889D639F /* SCLAlertView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		54B1439EA0C8737E1BAF1F8CEF27B62C /* NVActivityIndicatorView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC049F11516B9FB230A8FBBAC5EFAF10 /* Build configuration list for PBXNativeTarget "NVActivityIndicatorView" */;
+			buildPhases = (
+				DEC613BE6ED85EFC030D23BED1A98A36 /* Headers */,
+				751157CDF906BE304CAF58FE7BA4E9BA /* Sources */,
+				907C9B6973FF982F5A728DCC26F74119 /* Frameworks */,
+				44154340E1444E4F3CA81B5944C06C09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NVActivityIndicatorView;
+			productName = NVActivityIndicatorView;
+			productReference = 7537F7DE0372AD4E82FA02E2225E1BC6 /* NVActivityIndicatorView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		73377670A7A232201857038AF0858027 /* Socket.IO-Client-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37FADC867706C36E196A14BAE5E1F466 /* Build configuration list for PBXNativeTarget "Socket.IO-Client-Swift" */;
+			buildPhases = (
+				89747EA9173A4990E29CEF55E5C91D31 /* Headers */,
+				8B30EFC026C5DF537C5DB0E314DE7F50 /* Sources */,
+				76C566E5069E812BF040BBB37D4552A1 /* Frameworks */,
+				7DC5B360F2A86F5B659BF55FA20C97A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BD8D447E7149DAF38CB05B286091E5A /* PBXTargetDependency */,
+			);
+			name = "Socket.IO-Client-Swift";
+			productName = "Socket.IO-Client-Swift";
+			productReference = 9BF10D3F1AFDC8847213FD9E54FEFB63 /* SocketIO.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F5BC2CB67888A52708A542F50D2EBD84 /* Starscream */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04240C59DE715371CD9425DB1C7F78FC /* Build configuration list for PBXNativeTarget "Starscream" */;
+			buildPhases = (
+				87F88E66F630C6C6A975D690E2E33CB9 /* Headers */,
+				DA384478BBC9383EB8A345C66CBC4072 /* Sources */,
+				ECD2AE665F2C0B1149579F282BCF4DA6 /* Frameworks */,
+				A38332CF3EA4241732CBEB62130E5807 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Starscream;
+			productName = Starscream;
+			productReference = 9B402BF02462C8E5C0F71B308B797844 /* Starscream.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 5FA910A911EB9291F6DFA35E57DF108B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				54B1439EA0C8737E1BAF1F8CEF27B62C /* NVActivityIndicatorView */,
+				27F0E5220DBB71CF246F67A1FA053C47 /* Pods-SocketIOPPDProject */,
+				3A8520D6578DB27115BFE5707A160B3B /* SCLAlertView */,
+				73377670A7A232201857038AF0858027 /* Socket.IO-Client-Swift */,
+				F5BC2CB67888A52708A542F50D2EBD84 /* Starscream */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44154340E1444E4F3CA81B5944C06C09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C325B9933C024987160AFF756C1F45D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DC5B360F2A86F5B659BF55FA20C97A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A38332CF3EA4241732CBEB62130E5807 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEF623DD36D62DB0D18E9E43166C7F96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49E177B905506DD917283AB39F72F7B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E307BED12A40BB9ABCE87E5A673D090F /* Pods-SocketIOPPDProject-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		751157CDF906BE304CAF58FE7BA4E9BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87F34F8961C6C5A82D03627E43907EED /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
+				478D927565C9922FD7CFDE8520D87D81 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
+				4E8F9B0F535F34A47D1E01B5008D88DF /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
+				0A049810D911F2BE93DBB6DED9F85F9E /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
+				C3CDFE14B71893B7CB729FE8CD774898 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
+				7E827949633FFF0BFB3EA0AB00E7981E /* NVActivityIndicatorAnimationBallDoubleBounce.swift in Sources */,
+				BABDEEA0E400185112FC54048CFAEE33 /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
+				3EA01D63D0204092024D113ADC9B4C26 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
+				D62F3F1D3C2FEF3FF373FC98C9EE38E9 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
+				759757524FF111AEFBB5E236A3D19749 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
+				784708BBECB561B3319073D4A60A851E /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
+				B7DD9E55C13191ABF50159BFF1964F76 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */,
+				53F1C3093A17BF73042AF4BAB0E6B030 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */,
+				D38B7844BB5E179AB653102430112F55 /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
+				547FD24D18F637E68341E9F714B8D173 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
+				F47C7B7A22E39AEFC60CDC340315787A /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
+				4F7AB1D7316D3B8C31208ABF2D73CC31 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
+				BBE0890CA1E7E3C13426610AAA119F43 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
+				DB1E9B160B4DBD103B933A5619F5ABE5 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
+				173B2AB93E6069FDDF700BA452E92999 /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */,
+				E85C43B65C95128C5BDA0F48599FEE35 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
+				D7939CCB7D607B840E329C823E3C719C /* NVActivityIndicatorAnimationBlank.swift in Sources */,
+				CE4A42C71FB0A896E776CF9EC7BB1509 /* NVActivityIndicatorAnimationCircleStrokeSpin.swift in Sources */,
+				6A0BB21F82E342EC6809AA0F45BA4FFE /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
+				241D8706075A6FB075A5CFA2E60873C2 /* NVActivityIndicatorAnimationDelegate.swift in Sources */,
+				D5E044D8443D80A34DF2626AFB87FF73 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
+				7056AD6E8676C1D600CD3E0F66642078 /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */,
+				F93A7D854E9DE74090AE78651377004B /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
+				06C67BCBA6A874BD3880821F5DBB0A89 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
+				D37527398E12D52F839C0C9973775170 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
+				294E54C2F064E420252BC02E9E693C0B /* NVActivityIndicatorAnimationOrbit.swift in Sources */,
+				5DCAE6B70121FFEFA47B0A623777F1AE /* NVActivityIndicatorAnimationPacman.swift in Sources */,
+				88C546770279761A8EB932E1FC115A76 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
+				6552CAEB9AA077C793B8FA13C1B49B2F /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
+				3DDA9AC778332AD5C791AB22D387B251 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
+				0250367B9C6A10F20A3EFA4C38993F5A /* NVActivityIndicatorPresenter.swift in Sources */,
+				5BAA2E8935DDC767AA844976A263A145 /* NVActivityIndicatorShape.swift in Sources */,
+				3BB7737D1AFDED41F90C79EB8DE80FE8 /* NVActivityIndicatorView-dummy.m in Sources */,
+				DDE307664FA93D696E71ADD1D74C7F37 /* NVActivityIndicatorView.swift in Sources */,
+				7C0A63CAE4A3DFEB5FF026A2501D86EB /* NVActivityIndicatorViewable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B30EFC026C5DF537C5DB0E314DE7F50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11C8277029A99DD899665FCACC6559F7 /* Socket.IO-Client-Swift-dummy.m in Sources */,
+				601D6E7FBF5B1FAB3B55B885131BECF4 /* SocketAckEmitter.swift in Sources */,
+				D4D704B301D6939EEF8821460B780CF6 /* SocketAckManager.swift in Sources */,
+				7507E89370CA52DA96E6B4516C0FB5D2 /* SocketAnyEvent.swift in Sources */,
+				6F5B5B6646C8F7D9B6574FCC7CBF62CE /* SocketEngine.swift in Sources */,
+				1CCA2CC08B56677769B7D77A8BBB68B9 /* SocketEngineClient.swift in Sources */,
+				1F12EC96F2ABE587211047F96DFA7E4C /* SocketEnginePacketType.swift in Sources */,
+				570D148EA5586DD12C3D905DF5BD0CE0 /* SocketEnginePollable.swift in Sources */,
+				AED2B7562F01ACC08CEC008855D42816 /* SocketEngineSpec.swift in Sources */,
+				B2D7A6A7350799DDDF2AC0FB9445A6FE /* SocketEngineWebsocket.swift in Sources */,
+				A8BB65903664144DCD775401DCAC5EED /* SocketEventHandler.swift in Sources */,
+				8EADD7052A765D8ADCF99EE25E96CBF5 /* SocketExtensions.swift in Sources */,
+				EF0663D5BA2E8FB924DFFF9D6A21960E /* SocketIOClient.swift in Sources */,
+				5C078EA2CEB5E412ABBAA171FCD4CE1A /* SocketIOClientConfiguration.swift in Sources */,
+				4627514B91BB62D72A69C79D1C8F5CA8 /* SocketIOClientOption.swift in Sources */,
+				1F24EC855DDC4D8FB26355FB90E38DAA /* SocketIOClientSpec.swift in Sources */,
+				4305F2A2732FEDDE2F390F8304C723FC /* SocketIOStatus.swift in Sources */,
+				36D249D21D037500F20EA66941AFB165 /* SocketLogger.swift in Sources */,
+				3EFF959AB4062C01BC15EE926E2DF098 /* SocketManager.swift in Sources */,
+				31EBE2B525DD2947882DE8491B1B0573 /* SocketManagerSpec.swift in Sources */,
+				B720FB6A76350F4B8CE3ABEF570EC197 /* SocketPacket.swift in Sources */,
+				E5BA1F99FF60783C7AF53B917E1103E6 /* SocketParsable.swift in Sources */,
+				C824FCCE95EA6179468BABC05555A25B /* SocketRawView.swift in Sources */,
+				8B0F802D373D0E0BD16E3CB3B22A0257 /* SocketStringReader.swift in Sources */,
+				9AEFF9ACA2571EA98EF8A91F67DED965 /* SocketTypes.swift in Sources */,
+				2463DE0CC30C2416411B471BC5C212E4 /* SSLSecurity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B982938A252E8F7A36233823D036F42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5623CB10580033F357E78D7E6D86F811 /* SCLAlertView-dummy.m in Sources */,
+				E48A784AD37F1763146B97462B0904BF /* SCLAlertView.swift in Sources */,
+				F492284C62C0495545BABE40262B82A8 /* SCLExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA384478BBC9383EB8A345C66CBC4072 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D9E875CB4DA5D24A9FB51A6E70A079F /* Compression.swift in Sources */,
+				BC110F9F3DE714F21F8DC2F83E099143 /* SSLClientCertificate.swift in Sources */,
+				31E92A24B75F5F942EEA06A235236456 /* SSLSecurity.swift in Sources */,
+				AA8D577AD879869775634DA8CC5189DA /* Starscream-dummy.m in Sources */,
+				7949D5ED0732724A40FFB84172833146 /* WebSocket.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1AD27C1A54E24B1C3C8449A0892CB52A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Socket.IO-Client-Swift";
+			target = 73377670A7A232201857038AF0858027 /* Socket.IO-Client-Swift */;
+			targetProxy = 9DCD730F31E8975BB408D6881458D1BF /* PBXContainerItemProxy */;
+		};
+		2BB35A94402A76848C3388AF54FB0B9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SCLAlertView;
+			target = 3A8520D6578DB27115BFE5707A160B3B /* SCLAlertView */;
+			targetProxy = 608410804AFFEF78C66409424BF38BFC /* PBXContainerItemProxy */;
+		};
+		6BD8D447E7149DAF38CB05B286091E5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Starscream;
+			target = F5BC2CB67888A52708A542F50D2EBD84 /* Starscream */;
+			targetProxy = FDEA85C01F8609E4302CB0C77A55BAC7 /* PBXContainerItemProxy */;
+		};
+		BDD7E9394E0E3A96E26092F0B74178D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NVActivityIndicatorView;
+			target = 54B1439EA0C8737E1BAF1F8CEF27B62C /* NVActivityIndicatorView */;
+			targetProxy = 1D8BB8DA45503FE84CF9F0902665F7DF /* PBXContainerItemProxy */;
+		};
+		CCCD3EA43F657F9E6B18B58CC1D5C42F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Starscream;
+			target = F5BC2CB67888A52708A542F50D2EBD84 /* Starscream */;
+			targetProxy = FE4B402EB99826002D62D1FA8079F0E7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		068A219F9C384FD572D523EEE317D0C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		104D7A3F495453061CD867A43E733DC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3BAED55148664B04089203C59FFFE52 /* SCLAlertView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SCLAlertView/SCLAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SCLAlertView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SCLAlertView/SCLAlertView.modulemap";
+				PRODUCT_MODULE_NAME = SCLAlertView;
+				PRODUCT_NAME = SCLAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		107BEAD7F09211977AE3FA6ACB451287 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E4DF15EE8039495595BD986AF47B06E /* Starscream.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Starscream/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
+				PRODUCT_MODULE_NAME = Starscream;
+				PRODUCT_NAME = Starscream;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		20B3B5D14D2A1075AF66221E612AAF7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 770A544342FF73C7E060C1B143C80321 /* Socket.IO-Client-Swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Socket.IO-Client-Swift/Socket.IO-Client-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Socket.IO-Client-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Socket.IO-Client-Swift/Socket.IO-Client-Swift.modulemap";
+				PRODUCT_MODULE_NAME = SocketIO;
+				PRODUCT_NAME = SocketIO;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		391A91C5D0B25BE9355C844B915AE61A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D5DBE99E8D7D080D564A34F7E1B0F95 /* NVActivityIndicatorView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NVActivityIndicatorView/NVActivityIndicatorView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NVActivityIndicatorView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/NVActivityIndicatorView/NVActivityIndicatorView.modulemap";
+				PRODUCT_MODULE_NAME = NVActivityIndicatorView;
+				PRODUCT_NAME = NVActivityIndicatorView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		52BEC652E1C7E81EBD3CFF1FDFA9D4AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5643C58D5C173E9178159AA021BF2EC0 /* Pods-SocketIOPPDProject.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SocketIOPPDProject/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SocketIOPPDProject/Pods-SocketIOPPDProject.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5FA5F24B07F6168986B2E54F1C6CF926 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 770A544342FF73C7E060C1B143C80321 /* Socket.IO-Client-Swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Socket.IO-Client-Swift/Socket.IO-Client-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Socket.IO-Client-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Socket.IO-Client-Swift/Socket.IO-Client-Swift.modulemap";
+				PRODUCT_MODULE_NAME = SocketIO;
+				PRODUCT_NAME = SocketIO;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7437162992C8C4198610B3479400C61D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3BAED55148664B04089203C59FFFE52 /* SCLAlertView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SCLAlertView/SCLAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SCLAlertView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SCLAlertView/SCLAlertView.modulemap";
+				PRODUCT_MODULE_NAME = SCLAlertView;
+				PRODUCT_NAME = SCLAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A1310FE1D3E19C7C3A0DA11373D48AF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E4DF15EE8039495595BD986AF47B06E /* Starscream.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Starscream/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
+				PRODUCT_MODULE_NAME = Starscream;
+				PRODUCT_NAME = Starscream;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B2BD357886FD547BA16F0BCA5B078A27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D5DBE99E8D7D080D564A34F7E1B0F95 /* NVActivityIndicatorView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NVActivityIndicatorView/NVActivityIndicatorView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NVActivityIndicatorView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/NVActivityIndicatorView/NVActivityIndicatorView.modulemap";
+				PRODUCT_MODULE_NAME = NVActivityIndicatorView;
+				PRODUCT_NAME = NVActivityIndicatorView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C7AF56593BFA94E46B4466BECAF09E25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF7A63CA0E9AB19877EE9AADCBD8CAF9 /* Pods-SocketIOPPDProject.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SocketIOPPDProject/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SocketIOPPDProject/Pods-SocketIOPPDProject.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E29B0B57C53FF8C9953CE2983686A7F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04240C59DE715371CD9425DB1C7F78FC /* Build configuration list for PBXNativeTarget "Starscream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1310FE1D3E19C7C3A0DA11373D48AF6 /* Debug */,
+				107BEAD7F09211977AE3FA6ACB451287 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37FADC867706C36E196A14BAE5E1F466 /* Build configuration list for PBXNativeTarget "Socket.IO-Client-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FA5F24B07F6168986B2E54F1C6CF926 /* Debug */,
+				20B3B5D14D2A1075AF66221E612AAF7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E29B0B57C53FF8C9953CE2983686A7F9 /* Debug */,
+				068A219F9C384FD572D523EEE317D0C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		942BCC6038D1E1BF02BCA5475F543D13 /* Build configuration list for PBXNativeTarget "Pods-SocketIOPPDProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7AF56593BFA94E46B4466BECAF09E25 /* Debug */,
+				52BEC652E1C7E81EBD3CFF1FDFA9D4AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0498575172841F8FAF1A54E919C588C /* Build configuration list for PBXNativeTarget "SCLAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7437162992C8C4198610B3479400C61D /* Debug */,
+				104D7A3F495453061CD867A43E733DC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC049F11516B9FB230A8FBBAC5EFAF10 /* Build configuration list for PBXNativeTarget "NVActivityIndicatorView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				391A91C5D0B25BE9355C844B915AE61A /* Debug */,
+				B2BD357886FD547BA16F0BCA5B078A27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
