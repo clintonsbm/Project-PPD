@@ -80,36 +80,6 @@ class MainMenuViewController: UIViewController {
         alertResponder = AlertHelper.showWaiting(withTitle: "Esperando adversário", andSubTitle: "Estamos esperando um adversário na porta \(defaultPort)") {
             ConnectionHandler.shared.disconnectSockets()
         }
-        
-//        let timer = Timer(fire: Date().addingTimeInterval(5), interval: 5, repeats: true) { (timer) in
-//            if let status = ConnectionHandler.shared.connectionStatus,
-//                status == .connected {
-//                timer.invalidate()
-//                return
-//            }
-//
-//            defaultPort += 1
-//
-//            if defaultPort > 8903 {
-//                timer.invalidate()
-//                self.alertResponder?.close()
-//                return
-//            }
-//
-//            ConnectionHandler.shared.disconnectSockets()
-//            ConnectionHandler.shared.connectSockets(in: defaultPort)
-//
-//            self.alertResponder?.setSubTitle("Estamos esperando um adversário na porta \(defaultPort)")
-//        }
-//        timer.fire()
-    }
-    
-    @IBAction func logInMatchAction(_ sender: Any) {
-//        AlertHelper.showFieldAlert(withTitle: "Procurando adversário", andSubtitle: "Por favor defina a porta em que seu adversário se encontra") { (portString) in
-//            if let portNumber = Int(portString) {
-//                ConnectionHandler.shared.connectSockets(in: portNumber)
-//            }
-//        }
     }
 }
 

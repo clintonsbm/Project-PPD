@@ -20,6 +20,7 @@
 		BB15A54D220BC55A00C236A9 /* ConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB15A544220BC55A00C236A9 /* ConnectionHandler.swift */; };
 		BB15A552220CE6F000C236A9 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB15A551220CE6F000C236A9 /* AlertHelper.swift */; };
 		BB15A55C2211DB3900C236A9 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB15A55B2211DB3900C236A9 /* ChatView.swift */; };
+		BB8572532235858700986872 /* RPCHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8572522235858700986872 /* RPCHandler.swift */; };
 		BB86F835221EFDF2008175BC /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB86F834221EFDF2008175BC /* ArrayExtension.swift */; };
 		BB86F8372223F50D008175BC /* ColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB86F8362223F50D008175BC /* ColorExtention.swift */; };
 		BBCAD6442211E5B6004E2FC3 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCAD6422211E5B6004E2FC3 /* MessageTableViewCell.swift */; };
@@ -61,6 +62,7 @@
 		BB15A544220BC55A00C236A9 /* ConnectionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionHandler.swift; sourceTree = "<group>"; };
 		BB15A551220CE6F000C236A9 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		BB15A55B2211DB3900C236A9 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		BB8572522235858700986872 /* RPCHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPCHandler.swift; sourceTree = "<group>"; };
 		BB86F834221EFDF2008175BC /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		BB86F8362223F50D008175BC /* ColorExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtention.swift; sourceTree = "<group>"; };
 		BBCAD6422211E5B6004E2FC3 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				BB15A544220BC55A00C236A9 /* ConnectionHandler.swift */,
+				BB8572522235858700986872 /* RPCHandler.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				BB15A54A220BC55A00C236A9 /* MainMenuInteractor.swift in Sources */,
 				BBDA9495221DCE0000779E0E /* GameViewController.swift in Sources */,
 				BBCAD64E2211ED06004E2FC3 /* ChatWorker.swift in Sources */,
+				BB8572532235858700986872 /* RPCHandler.swift in Sources */,
 				BBDA9492221DCE0000779E0E /* GameWorker.swift in Sources */,
 				BB15A55C2211DB3900C236A9 /* ChatView.swift in Sources */,
 				BBCAD64D2211ED06004E2FC3 /* ChatPresenter.swift in Sources */,
