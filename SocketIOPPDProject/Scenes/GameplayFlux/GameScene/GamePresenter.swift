@@ -13,10 +13,10 @@
 import UIKit
 
 protocol GamePresentationLogic {
-    func presentRemoveLetter(response: Game.ReceivedLetterEvent.Response)
-    func presentRequestToConfirm(response: Game.ReceivedRequestToConfim.Response)
+    func presentRemoveLetter(response: Game.LetterEvent.Response)
+    func presentRequestToConfirm(response: Game.ConfirmTurn.Response)
     func presentSetupForConfirmDeny(response: Game.SetupForConfirmDenyResponse.Response)
-    func presentResponseToConfirm(response: Game.ReceivedResponseToConfirm.Response)
+    func presentResponseToConfirm(response: Game.TurnConfirmed.Response)
     func presentSortLetter(response: Game.SortLetter.Response)
     func presentRestartMatch(response: Game.RestartMatch.Response)
 }
@@ -26,16 +26,16 @@ class GamePresenter: GamePresentationLogic {
     
     // MARK: Remove letter
     
-    func presentRemoveLetter(response: Game.ReceivedLetterEvent.Response) {
-        let viewModel = Game.ReceivedLetterEvent.ViewModel(textToLabel: "Suas letras restantes: \(response.lettersLeft)")
+    func presentRemoveLetter(response: Game.LetterEvent.Response) {
+        let viewModel = Game.LetterEvent.ViewModel(textToLabel: "Suas letras restantes: \(response.lettersLeft)")
         viewController?.displayRemoveLetter(viewModel: viewModel)
     }
     
     // MARK: Request to confirm
     
-    func presentRequestToConfirm(response: Game.ReceivedRequestToConfim.Response) {
+    func presentRequestToConfirm(response: Game.ConfirmTurn.Response) {
         if response.lettersToRemove.isEmpty {
-            let response = Game.ReceivedRequestToConfim.ViewModel(shouldBypassConfirmation: true, lettersToRemove: [], textToLabel: "")
+            let response = Game.ConfirmTurn.ViewModel(shouldBypassConfirmation: true, lettersToRemove: [], textToLabel: "")
             viewController?.displayRequestToConfirm(viewModel: response)
             return
         }
@@ -45,7 +45,7 @@ class GamePresenter: GamePresentationLogic {
             text.append(letter)
         }
         
-        let response = Game.ReceivedRequestToConfim.ViewModel(shouldBypassConfirmation: false, lettersToRemove: response.lettersToRemove, textToLabel: text)
+        let response = Game.ConfirmTurn.ViewModel(shouldBypassConfirmation: false, lettersToRemove: response.lettersToRemove, textToLabel: text)
         viewController?.displayRequestToConfirm(viewModel: response)
     }
     
@@ -58,8 +58,8 @@ class GamePresenter: GamePresentationLogic {
     
     // MARK: Response to confirm
     
-    func presentResponseToConfirm(response: Game.ReceivedResponseToConfirm.Response) {
-        let viewModel = Game.ReceivedResponseToConfirm.ViewModel(confirmRound: response.confirmRound ?? false, lettersToRemove: response.lettersToRemove ?? [])
+    func presentResponseToConfirm(response: Game.TurnConfirmed.Response) {
+        let viewModel = Game.TurnConfirmed.ViewModel(confirmRound: response.confirmRound ?? false, lettersToRemove: response.lettersToRemove ?? [])
         viewController?.displayResponseToConfirm(viewModel: viewModel)
     }
     

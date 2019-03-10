@@ -13,10 +13,10 @@
 import UIKit
 
 protocol GameBusinessLogic {
-    func removeLetter(request: Game.ReceivedLetterEvent.Request)
-    func requestToConfirm(request: Game.ReceivedRequestToConfim.Request)
+    func removeLetter(request: Game.LetterEvent.Request)
+    func requestToConfirm(request: Game.ConfirmTurn.Request)
     func setupForConfirmDeny(request: Game.SetupForConfirmDenyResponse.Request)
-    func responseToConfirm(request: Game.ReceivedResponseToConfirm.Request)
+    func responseToConfirm(request: Game.TurnConfirmed.Request)
     func sortLetter(request: Game.SortLetter.Request)
     func restartMatch(request: Game.RestartMatch.Request)
 }
@@ -39,7 +39,7 @@ class GameInteractor: GameBusinessLogic, GameDataStore {
     
     // MARK: Remove letter
     
-    func removeLetter(request: Game.ReceivedLetterEvent.Request) {
+    func removeLetter(request: Game.LetterEvent.Request) {
         if let letter = request.letter {
             if request.isRemoveEvent {
                 lettersToRemove.append(letter)
@@ -48,14 +48,14 @@ class GameInteractor: GameBusinessLogic, GameDataStore {
             }
         }
         
-        let response = Game.ReceivedLetterEvent.Response(lettersLeft: oponentLettersLeft - lettersToRemove.count)
+        let response = Game.LetterEvent.Response(lettersLeft: oponentLettersLeft - lettersToRemove.count)
         presenter?.presentRemoveLetter(response: response)
     }
     
     // MARK: Request to confirm
     
-    func requestToConfirm(request: Game.ReceivedRequestToConfim.Request) {
-        let response = Game.ReceivedRequestToConfim.Response(lettersToRemove: lettersToRemove)
+    func requestToConfirm(request: Game.ConfirmTurn.Request) {
+        let response = Game.ConfirmTurn.Response(lettersToRemove: lettersToRemove)
         presenter?.presentRequestToConfirm(response: response)
     }
     
@@ -75,8 +75,8 @@ class GameInteractor: GameBusinessLogic, GameDataStore {
     
     // MARK: Response to confirm
     
-    func responseToConfirm(request: Game.ReceivedResponseToConfirm.Request) {
-        let response = Game.ReceivedResponseToConfirm.Response(confirmRound: request.confirmRound, lettersToRemove: request.lettersToRemove)
+    func responseToConfirm(request: Game.TurnConfirmed.Request) {
+        let response = Game.TurnConfirmed.Response(confirmRound: request.confirmRound, lettersToRemove: request.lettersToRemove)
         presenter?.presentResponseToConfirm(response: response)
     }
     

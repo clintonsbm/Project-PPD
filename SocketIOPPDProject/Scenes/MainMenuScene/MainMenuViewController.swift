@@ -73,9 +73,9 @@ class MainMenuViewController: UIViewController {
     // MARK: Actions
     
     @IBAction func searchForMatch(_ sender: Any) {
-        ConnectionHandler.shared.set(newDelegate: self)
+        RPCHandler.sharedOponent.set(newDelegate: self)
+        RPCHandler.sharedOponent.connectSockets()
         let defaultPort = 8900
-        ConnectionHandler.shared.connectSockets()
         
         alertResponder = AlertHelper.showWaiting(withTitle: "Esperando adversário", andSubTitle: "Estamos esperando um adversário na porta \(defaultPort)") {
             ConnectionHandler.shared.disconnectSockets()
@@ -83,7 +83,7 @@ class MainMenuViewController: UIViewController {
     }
 }
 
-extension MainMenuViewController: ConnectionHandlerDelegate {
+extension MainMenuViewController: RPCChatDelegate {
     func startChat(username: String?) {
         let request = MainMenu.ConnectionAccepted.Request(playerUsername: username)
         interactor?.connectionAccepted(request: request)

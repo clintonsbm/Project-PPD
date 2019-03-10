@@ -16,7 +16,7 @@ enum Game {
     
     // MARK: Use cases
     
-    enum ReceivedLetterEvent {
+    enum LetterEvent {
         struct Request {
             let isRemoveEvent: Bool
             let letter: String?
@@ -29,7 +29,7 @@ enum Game {
         }
     }
     
-    enum ReceivedRequestToConfim {
+    enum ConfirmTurn {
         struct Request {
         }
         struct Response {
@@ -58,7 +58,7 @@ enum Game {
         }
     }
     
-    enum ReceivedResponseToConfirm {
+    enum TurnConfirmed {
         struct Request {
             let confirmRound: Bool?
             let lettersToRemove: [String]?

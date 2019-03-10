@@ -13,7 +13,7 @@ protocol RPCChatDelegate: NSObjectProtocol {
     func connected()
     func disconnected()
     func startChat(username: String?)
-    func received(message: String?)
+    func add(message: String?)
 }
 
 extension RPCChatDelegate {
@@ -29,27 +29,27 @@ extension RPCChatDelegate {
         print("Received username: \(username ?? "Empty username error")")
     }
     
-    func received(message: String?) {
+    func add(message: String?) {
         print("\n\nReceived message: \(message ?? "Empty message error")\n\n\n")
     }
 }
 
 protocol RPCGameDelegate: NSObjectProtocol {
-    func receiveRemove(letter: String?)
-    func receiveAdd(letter: String?)
-    func receiveRequestToConfirm()
-    func receiveResponseToConfirm(response: Bool?, lettersToRemove: [String]?)
-    func receiveSortLetter(letter: String?, letterIndex: Int?)
-    func receiveOtherUserResign()
-    func receiveOtherUserWon()
-    func receiveRestartMatch()
+    func remove(letter: String?)
+    func add(letter: String?)
+    func confirmTurn()
+    func turnConfirmation(response: Bool?, lettersToRemove: [String]?)
+    func sort(letter: String?, letterIndex: Int?)
+    func otherUserResign()
+    func otherUserWon()
+    func restartMatch()
 }
 
 class RPCHandler: NSObject {
     
     // MARK: Singleton
     
-    static let shared = ConnectionHandler()
+    static let sharedOponent = RPCHandler()
     
     // MARK: Connection configuration
     
@@ -85,14 +85,14 @@ class RPCHandler: NSObject {
     
     // MARK: Control variables
     
-    private weak var delegate: RPCChatDelegate?
+    private weak var chatDelegate: RPCChatDelegate?
     private weak var gameDelegate: RPCGameDelegate?
     
     private var socketManager: SocketManager?
     private var chatSocket: SocketIOClient?
     private var gameSocket: SocketIOClient?
     
-    private var username: String = ""
+    private var oponentsOponentUsername: String = ""
     
     override init() {
         super.init()
@@ -109,46 +109,46 @@ class RPCHandler: NSObject {
     
     private func setupChatSocketEvents() {
         chatSocket!.on(clientEvent: .connect) {data, ack in
-            self.delegate?.connected()
+            self.chatDelegate?.connected()
         }
         
         chatSocket!.on(clientEvent: .disconnect) { (_, _) in
-            self.delegate?.disconnected()
+            self.chatDelegate?.disconnected()
         }
         
         chatSocket!.on(startChatEvent) {data, ack in
-            self.delegate?.startChat(username: data[0] as? String)
+            self.chatDelegate?.startChat(username: data[0] as? String)
         }
         
         chatSocket!.on(receiveMessageEvent) { (data, ack) in
-            self.delegate?.received(message: data[0] as? String)
+            self.chatDelegate?.add(message: data[0] as? String)
         }
     }
     
     private func setupGameSocketEvents() {
         chatSocket!.on(receiveRemoveLetterEvent) { (data, ack) in
-            self.gameDelegate?.receiveRemove(letter: data.first as? String)
+            self.gameDelegate?.remove(letter: data.first as? String)
         }
         chatSocket!.on(receiveAddLetterEvent) { (data, ack) in
-            self.gameDelegate?.receiveAdd(letter: data.first as? String)
+            self.gameDelegate?.add(letter: data.first as? String)
         }
         chatSocket!.on(receiveRequestToConfirmEvent) { (_, _) in
-            self.gameDelegate?.receiveRequestToConfirm()
+            self.gameDelegate?.confirmTurn()
         }
         chatSocket!.on(receiveResponseToConfirmeEvent) { (data, ack) in
-            self.gameDelegate?.receiveResponseToConfirm(response: data.first as? Bool, lettersToRemove: data[1] as? [String])
+            self.gameDelegate?.turnConfirmation(response: data.first as? Bool, lettersToRemove: data[1] as? [String])
         }
         chatSocket!.on(receiveSortLetterEvent) { (data, ack) in
-            self.gameDelegate?.receiveSortLetter(letter: data.first as? String, letterIndex: data[1] as? Int)
+            self.gameDelegate?.sort(letter: data.first as? String, letterIndex: data[1] as? Int)
         }
         chatSocket!.on(receiveOtherUserResignEvent) { (data, ack) in
-            self.gameDelegate?.receiveOtherUserResign()
+            self.gameDelegate?.otherUserResign()
         }
         chatSocket!.on(receiveOtherUserWonEvent) { (data, ack) in
-            self.gameDelegate?.receiveOtherUserWon()
+            self.gameDelegate?.otherUserWon()
         }
         chatSocket!.on(receiveRestartMatchEvent) { (data, ack) in
-            self.gameDelegate?.receiveRestartMatch()
+            self.gameDelegate?.restartMatch()
         }
     }
     
@@ -164,52 +164,65 @@ class RPCHandler: NSObject {
         gameSocket?.disconnect()
     }
     
-    func set(newDelegate: ConnectionHandlerDelegate) {
-        delegate = newDelegate
+    func set(newDelegate: RPCChatDelegate) {
+        chatDelegate = newDelegate
     }
     
-    func set(newDelegate: GameHandlerDelegate) {
+    func set(newDelegate: RPCGameDelegate) {
         gameDelegate = newDelegate
     }
     
-    func setUsername(newUsername: String) {
-        username = newUsername
+    func setOponentsOponentUsername(newUsername: String) {
+        oponentsOponentUsername = newUsername
     }
     
-    func getUsername() -> String {
-        return username
+    func getOponentsOponentUsername() -> String {
+        return oponentsOponentUsername
+    }
+}
+
+extension RPCHandler: RPCChatDelegate {
+    func add(message: String?) {
+        guard let message = message else { return }
+        socketManager!.defaultSocket.emit(sendMessageEvent, oponentsOponentUsername, message)
+    }
+}
+
+extension RPCHandler: RPCGameDelegate {
+    func remove(letter: String?) {
+        guard let letter = letter else { return }
+        socketManager!.defaultSocket.emit(sendRemoveLetterEvent, oponentsOponentUsername, letter)
     }
     
-    // MARK: Chat emit methods
-    
-    func send(message: String) {
-        socketManager!.defaultSocket.emit(sendMessageEvent, username, message)
+    func add(letter: String?) {
+        guard let letter = letter else { return }
+        socketManager!.defaultSocket.emit(sendAddLetterEvent, oponentsOponentUsername, letter)
     }
     
-    // MARK: Game emit methods
-    
-    func sendRemove(letter: String) {
-        socketManager!.defaultSocket.emit(sendRemoveLetterEvent, username, letter)
+    func confirmTurn() {
+        socketManager!.defaultSocket.emit(sendRequestToConfirmEvent, oponentsOponentUsername)
     }
     
-    func sendAdd(letter: String) {
-        socketManager!.defaultSocket.emit(sendAddLetterEvent, username, letter)
+    func turnConfirmation(response: Bool?, lettersToRemove: [String]?) {
+        guard let response = response, let lettersToRemove = lettersToRemove else { return }
+        socketManager!.defaultSocket.emit(sendResponseToConfirmEvent, oponentsOponentUsername, response, lettersToRemove)
     }
     
-    func sendRequestToConfirm() {
-        socketManager!.defaultSocket.emit(sendRequestToConfirmEvent, username)
+    func sort(letter: String?, letterIndex: Int?) {
+        guard let newLetter = letter, let newLetterIndex = letterIndex else { return }
+        socketManager!.defaultSocket.emit(sendSortLetterEvent, oponentsOponentUsername, newLetter, newLetterIndex)
     }
     
-    func sendResponseToConfirm(response: Bool, andLettersToRemove lettersToRemove: [String]) {
-        socketManager!.defaultSocket.emit(sendResponseToConfirmEvent, username, response, lettersToRemove)
+    func otherUserResign() {
+        return
     }
     
-    func sendSort(letter: String, andLetterIndex index: Int) {
-        socketManager!.defaultSocket.emit(sendSortLetterEvent, username, letter, index)
+    func otherUserWon() {
+        return
     }
-    
+
     func sendCurrentUserWon() {
-        socketManager!.defaultSocket.emit(sendCurrentUserWonEvent, username)
+        socketManager!.defaultSocket.emit(sendCurrentUserWonEvent, oponentsOponentUsername)
     }
     
     func restartMatch() {

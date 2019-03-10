@@ -30,8 +30,8 @@ class MainMenuRouter: NSObject, MainMenuRoutingLogic, MainMenuDataPassing {
         let gameViewController = GameViewController(nibName: GameViewController.nibIdentifier, bundle: nil)
         let chatController = ChatViewController()
         
-        ConnectionHandler.shared.set(newDelegate: gameViewController)
-        ConnectionHandler.shared.set(newDelegate: chatController)
+        RPCHandler.sharedOponent.set(newDelegate: gameViewController)
+        RPCHandler.sharedOponent.set(newDelegate: chatController)
         
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [UINavigationController(rootViewController: gameViewController), chatController]

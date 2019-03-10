@@ -17,7 +17,7 @@ protocol MainMenuBusinessLogic {
 }
 
 protocol MainMenuDataStore {
-    var playerUsername: String? { get set }
+    var oponent: (RPCHandler & RPCChatDelegate)? { get set }
 }
 
 class MainMenuInteractor: MainMenuBusinessLogic, MainMenuDataStore {
@@ -26,16 +26,14 @@ class MainMenuInteractor: MainMenuBusinessLogic, MainMenuDataStore {
     
     // MARK: DataStore
     
-    var playerUsername: String?
+    var oponent: (RPCHandler & RPCChatDelegate)? = RPCHandler.sharedOponent
     
     // MARK: Connection accepted
     
     func connectionAccepted(request: MainMenu.ConnectionAccepted.Request) {
         if let username = request.playerUsername {
-            ConnectionHandler.shared.setUsername(newUsername: username)
+            oponent?.setOponentsOponentUsername(newUsername: username)
         }
-        
-        playerUsername = request.playerUsername
         
         let response = MainMenu.ConnectionAccepted.Response(playerUsername: request.playerUsername)
         presenter?.presentConnectionAccepted(response: response)

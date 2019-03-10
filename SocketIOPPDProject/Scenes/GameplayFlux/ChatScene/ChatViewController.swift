@@ -63,12 +63,12 @@ class ChatViewController: UIViewController {
 
 extension ChatViewController: ChatViewDelegate {
     func send(message: String) {
-        ConnectionHandler.shared.send(message: message)
+        RPCHandler.sharedOponent.add(message: message)
     }
 }
 
-extension ChatViewController: ConnectionHandlerDelegate {
-    func received(message: String?) {
+extension ChatViewController: RPCChatDelegate {
+    func add(message: String?) {
         guard let message = message else { return }
         (view as! ChatView).addMessage(isFromCurrentUser: false, message: message)
     }
