@@ -14,7 +14,7 @@ import UIKit
 import SCLAlertView
 
 protocol MainMenuDisplayLogic: class {
-    func displayConnectionAccepted(viewModel: MainMenu.ConnectionAccepted.ViewModel)
+    func displayConnectToServer(viewModel: MainMenu.ConnectToNameServer.ViewModel)
 }
 
 class MainMenuViewController: UIViewController {
@@ -70,35 +70,29 @@ class MainMenuViewController: UIViewController {
     
     var alertResponder: SCLAlertViewResponder?
     
+    // MARK: View lifecycle
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//        router?.routeToGameplayFlux()
+    }
+    
     // MARK: Actions
     
-    @IBAction func searchForMatch(_ sender: Any) {
-        RPCHandler.sharedOponent.set(newDelegate: self)
-        RPCHandler.sharedOponent.connectSockets()
-        let defaultPort = 8900
-        
-        alertResponder = AlertHelper.showWaiting(withTitle: "Esperando adversário", andSubTitle: "Estamos esperando um adversário na porta \(defaultPort)") {
-            ConnectionHandler.shared.disconnectSockets()
+    @IBAction func searchForMatch(_ sender: Any) {        
+        AlertHelper.showFieldAlert(withTitle: "Iniciar partida", andSubtitle: "Iniciar partida com servidor de nomes na porta:") { (portNumber) in
+            let request = MainMenu.ConnectToNameServer.Request(portNumber: portNumber)
+            self.interactor?.connectToNameServer(request: request)
         }
-    }
-}
-
-extension MainMenuViewController: RPCChatDelegate {
-    func startChat(username: String?) {
-        let request = MainMenu.ConnectionAccepted.Request(playerUsername: username)
-        interactor?.connectionAccepted(request: request)
     }
 }
 
 extension MainMenuViewController: MainMenuDisplayLogic {
     
-    // MARK: Connection accepted
+    // MARK: Connect to name server
     
-    func displayConnectionAccepted(viewModel: MainMenu.ConnectionAccepted.ViewModel) {
-        let dispatchTime = DispatchTime.now() + 1
-        DispatchQueue.main.asyncAfter(deadline: dispatchTime) {
-            self.alertResponder?.close()
-            print("Route to next game scene")
+    func displayConnectToServer(viewModel: MainMenu.ConnectToNameServer.ViewModel) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
             self.router?.routeToGameplayFlux()
         }
     }

@@ -9,4 +9,5 @@ target 'SocketIOPPDProject' do
 pod 'Socket.IO-Client-Swift', '~> 14.0.0'
 pod 'SCLAlertView'
 pod 'NVActivityIndicatorView'
+pod 'SwiftGRPC'
 end

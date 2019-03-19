@@ -11,13 +11,16 @@
 //
 
 import UIKit
+import SwiftGRPC
 
 protocol MainMenuBusinessLogic {
-    func connectionAccepted(request: MainMenu.ConnectionAccepted.Request)
+    func connectToNameServer(request: MainMenu.ConnectToNameServer.Request)
 }
 
 protocol MainMenuDataStore {
-    var oponent: (RPCHandler & RPCChatDelegate)? { get set }
+    var client: NoteServiceServiceClient? { get set }
+    var clientName: String? { get set }
+//    var oponent: (RPCHandler & RPCChatDelegate)? { get set }
 }
 
 class MainMenuInteractor: MainMenuBusinessLogic, MainMenuDataStore {
@@ -26,17 +29,19 @@ class MainMenuInteractor: MainMenuBusinessLogic, MainMenuDataStore {
     
     // MARK: DataStore
     
-    var oponent: (RPCHandler & RPCChatDelegate)? = RPCHandler.sharedOponent
+    var client: NoteServiceServiceClient?
+    var clientName: String?
     
-    // MARK: Connection accepted
+    // MARK: Connect to name server
     
-    func connectionAccepted(request: MainMenu.ConnectionAccepted.Request) {
-        if let username = request.playerUsername {
-            oponent?.setOponentsOponentUsername(newUsername: username)
-        }
+    func connectToNameServer(request: MainMenu.ConnectToNameServer.Request) {
+        self.client = NoteServiceServiceClient(address: "127.0.0.1:\(request.portNumber)", secure: false)
         
-        let response = MainMenu.ConnectionAccepted.Response(playerUsername: request.playerUsername)
-        presenter?.presentConnectionAccepted(response: response)
+        _ = try? self.client?.username(Empty(), completion: { (chatMessageContainigUsername, _) in
+            self.clientName = chatMessageContainigUsername?.content ?? ""
+            let response = MainMenu.ConnectToNameServer.Response(username: self.clientName!)
+            self.presenter?.presentConnecToNameServer(response: response)
+        })
     }
 }
 

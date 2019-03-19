@@ -10,6 +10,7 @@ import UIKit
 
 protocol ChatViewDelegate: NSObjectProtocol {
     func send(message: String)
+    func refresh()
 }
 
 class ChatView: UIView {
@@ -18,16 +19,17 @@ class ChatView: UIView {
     
     let nibName = "ChatView"
 
-    // MARK: Control variable
-    
-    weak var delegate: ChatViewDelegate?
-    private var messages: [Message] = []
-    
-    // MARK: Outlets
+    // MARK: UI
     
     let tableView = UITableView()
     let textView = UITextView()
     let sendButton = UIButton()
+    
+    // MARK: Control variable
+    
+    weak var delegate: ChatViewDelegate?
+    private var messages: [Message] = []
+    private var timer: Timer!
 
     // MARK: View lifecycle
     
@@ -48,9 +50,15 @@ class ChatView: UIView {
     }
 
     private func setupView() {
+        // Timer
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(refresh), userInfo: nil, repeats: true)
+        timer.fire()
+        // View
         backgroundColor = .gray
         setupConstraints()
         // Setup table view
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: MessageTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: MessageTableViewCell.identifier)
@@ -99,11 +107,27 @@ class ChatView: UIView {
         sendButton.isEnabled = false
     }
     
-    // MARK: Puclic methods
+    @objc
+    func refresh() {
+        tableView.refreshControl?.endRefreshing()
+        delegate?.refresh()
+    }
+    
+    // MARK: Public methods
     
     func addMessage(isFromCurrentUser: Bool, message: String) {
         messages.append(Message(isFromCurrentUser: isFromCurrentUser, text: message))
         tableView.insertRows(at: [IndexPath(row: messages.count - 1, section: 0)], with: UITableView.RowAnimation.bottom)
+    }
+    
+    func add(allMessages: [Message]) {
+        if !allMessages.isEmpty {
+            for messageIndex in self.messages.count..<allMessages.count {
+                let newMessage = allMessages[messageIndex]
+                messages.append(newMessage)
+                tableView.insertRows(at: [IndexPath(row: messages.count - 1, section: 0)], with: UITableView.RowAnimation.bottom)
+            }
+        }
     }
 }
 

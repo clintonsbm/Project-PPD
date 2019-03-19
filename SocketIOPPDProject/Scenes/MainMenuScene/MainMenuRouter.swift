@@ -27,12 +27,11 @@ class MainMenuRouter: NSObject, MainMenuRoutingLogic, MainMenuDataPassing {
     // MARK: Routing
     
     func routeToGameplayFlux() {
+        // Instantiate
         let gameViewController = GameViewController(nibName: GameViewController.nibIdentifier, bundle: nil)
         let chatController = ChatViewController()
         
-        RPCHandler.sharedOponent.set(newDelegate: gameViewController)
-        RPCHandler.sharedOponent.set(newDelegate: chatController)
-        
+        // Mount
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [UINavigationController(rootViewController: gameViewController), chatController]
         tabBarController.tabBar.items?[0].image = #imageLiteral(resourceName: "gameIcon")
@@ -40,6 +39,27 @@ class MainMenuRouter: NSObject, MainMenuRoutingLogic, MainMenuDataPassing {
         tabBarController.tabBar.items?[1].image = #imageLiteral(resourceName: "chatIcon")
         tabBarController.tabBar.items?[1].title = "Chat"
         
-        viewController?.present(tabBarController, animated: true, completion: nil)
+        // Pass data
+        var gameDestination = gameViewController.router?.dataStore
+        var chatDestination = chatController.router?.dataStore
+        passDataToGameplayFlux(source: dataStore, gameDestination: &gameDestination, chatDestination: &chatDestination)
+        
+        // Navigate
+        navigateToGameplayFlux(source: viewController, destination: tabBarController)
+    }
+    
+    // MARK: Navigation
+    
+    func navigateToGameplayFlux(source: UIViewController?, destination: UITabBarController) {
+        source?.present(destination, animated: true, completion: nil)
+    }
+    
+    // MARK: Passing data
+    
+    func passDataToGameplayFlux(source: MainMenuDataStore?, gameDestination: inout GameDataStore?, chatDestination: inout ChatDataStore?) {
+        gameDestination?.client = source?.client
+        gameDestination?.clientName = source?.clientName
+        chatDestination?.client = source?.client
+        chatDestination?.clientName = source?.clientName
     }
 }

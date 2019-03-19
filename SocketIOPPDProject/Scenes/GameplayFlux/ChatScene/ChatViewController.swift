@@ -11,8 +11,11 @@
 //
 
 import UIKit
+import SwiftGRPC
 
 protocol ChatDisplayLogic: class {
+    func displaySendMessage(viewModel: Chat.SendMessage.ViewModel)
+    func displayRefreshMessages(viewModel: Chat.RefreshMessages.ViewModel)
 }
 
 class ChatViewController: UIViewController {
@@ -46,7 +49,9 @@ class ChatViewController: UIViewController {
         router.dataStore = interactor
         
         // Intantiave chat view to show messages
-        view = ChatView(delegate: self)
+        DispatchQueue.main.async {
+            self.view = ChatView(delegate: self)
+        }
     }
     
     // MARK: Routing
@@ -63,17 +68,32 @@ class ChatViewController: UIViewController {
 
 extension ChatViewController: ChatViewDelegate {
     func send(message: String) {
-        RPCHandler.sharedOponent.add(message: message)
+        let request = Chat.SendMessage.Request(message: message)
+        interactor?.sendMessage(request: request)
     }
-}
-
-extension ChatViewController: RPCChatDelegate {
-    func add(message: String?) {
-        guard let message = message else { return }
-        (view as! ChatView).addMessage(isFromCurrentUser: false, message: message)
+    
+    func refresh() {
+        let request = Chat.RefreshMessages.Request()
+        interactor?.refreshMessages(reques: request)
     }
 }
 
 extension ChatViewController: ChatDisplayLogic {
     
+    // MARK: Send message
+    
+    func displaySendMessage(viewModel: Chat.SendMessage.ViewModel) {
+        if !viewModel.success {
+//            AlertHelper.show
+            print("Error")
+        }
+    }
+    
+    // MARK: Refresh messages
+    
+    func displayRefreshMessages(viewModel: Chat.RefreshMessages.ViewModel) {
+        DispatchQueue.main.async {
+            (self.view as! ChatView).add(allMessages: viewModel.messages)
+        }
+    }
 }

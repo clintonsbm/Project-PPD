@@ -13,23 +13,16 @@
 import UIKit
 
 protocol MainMenuPresentationLogic {
-    func presentConnectionAccepted(response: MainMenu.ConnectionAccepted.Response)
+    func presentConnecToNameServer(response: MainMenu.ConnectToNameServer.Response)
 }
 
 class MainMenuPresenter: MainMenuPresentationLogic {
     weak var viewController: MainMenuDisplayLogic?
     
-    // MARK: Connection accepted
+    // MARK: Connect to name server
     
-    func presentConnectionAccepted(response: MainMenu.ConnectionAccepted.Response) {
-        var isValidUsername = false
-        
-        if let username = response.playerUsername,
-            username != "" {
-            isValidUsername = true
-        }
-        
-        let viewModel = MainMenu.ConnectionAccepted.ViewModel(isValidUsername: isValidUsername)
-        viewController?.displayConnectionAccepted(viewModel: viewModel)
+    func presentConnecToNameServer(response: MainMenu.ConnectToNameServer.Response) {
+        let viewModel = MainMenu.ConnectToNameServer.ViewModel(username: response.username)
+        viewController?.displayConnectToServer(viewModel: viewModel)
     }
 }

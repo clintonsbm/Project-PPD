@@ -13,9 +13,31 @@
 import UIKit
 
 protocol ChatPresentationLogic {
+    func presentSendMessage(response: Chat.SendMessage.Response)
+    func presentRefreshMessages(response: Chat.RefreshMessages.Response)
 }
 
 class ChatPresenter: ChatPresentationLogic {
     weak var viewController: ChatDisplayLogic?
     
+    // MARK: Send message
+    
+    func presentSendMessage(response: Chat.SendMessage.Response) {
+        let viewModel = Chat.SendMessage.ViewModel(success: response.success)
+        viewController?.displaySendMessage(viewModel: viewModel)
+    }
+    
+    // MARK: Refresh messages
+    
+    func presentRefreshMessages(response: Chat.RefreshMessages.Response) {
+        var messages = [Message]()
+        let username = response.username ?? "1"
+        
+        response.messages?.messages.forEach({ (chatMessage) in
+            messages.append(Message(isFromCurrentUser: chatMessage.user == username, text: chatMessage.content))
+        })
+        
+        let viewModel = Chat.RefreshMessages.ViewModel(messages: messages)
+        viewController?.displayRefreshMessages(viewModel: viewModel)
+    }
 }

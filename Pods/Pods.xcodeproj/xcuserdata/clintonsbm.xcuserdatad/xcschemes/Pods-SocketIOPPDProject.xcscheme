@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "27F0E5220DBB71CF246F67A1FA053C47"
+               BlueprintIdentifier = "DABA63F63EFE4E3176C2F8B603971C59"
                BuildableName = "Pods_SocketIOPPDProject.framework"
                BlueprintName = "Pods-SocketIOPPDProject"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "27F0E5220DBB71CF246F67A1FA053C47"
+            BlueprintIdentifier = "DABA63F63EFE4E3176C2F8B603971C59"
             BuildableName = "Pods_SocketIOPPDProject.framework"
             BlueprintName = "Pods-SocketIOPPDProject"
             ReferencedContainer = "container:Pods.xcodeproj">

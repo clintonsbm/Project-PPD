@@ -51,24 +51,24 @@ class AlertHelper: NSObject {
     }
     
     static func showFinalAlert(didUserWon: Bool, didUserOtherResign: Bool, mainViewCompletion completion: @escaping(() -> Void)) {
-        let alert = SCLAlertView(appearance: appearance)
-        alert.addButton("Tela inicial") {
-            completion()
-            return
-        }
-        if !didUserOtherResign {
-            alert.addButton("Reiniciar partida") {
-                ConnectionHandler.shared.restartMatch()
-                return
-            }
-        }
-        
-        if didUserWon {
-            alert.showSuccess("Parabéns!", subTitle: "Você ganhou.")
-            return
-        }
-        
-        alert.showNotice("Você perdeu", subTitle: "Não foi dessa vez, mas sempre podemos jogar novamente")
+//        let alert = SCLAlertView(appearance: appearance)
+//        alert.addButton("Tela inicial") {
+//            completion()
+//            return
+//        }
+//        if !didUserOtherResign {
+//            alert.addButton("Reiniciar partida") {
+//                ConnectionHandler.shared.restartMatch()
+//                return
+//            }
+//        }
+//        
+//        if didUserWon {
+//            alert.showSuccess("Parabéns!", subTitle: "Você ganhou.")
+//            return
+//        }
+//        
+//        alert.showNotice("Você perdeu", subTitle: "Não foi dessa vez, mas sempre podemos jogar novamente")
     }
     
     @discardableResult
@@ -76,13 +76,16 @@ class AlertHelper: NSObject {
         let alert = SCLAlertView(appearance: appearance)
         
         let textField = alert.addTextField()
+        textField.placeholder = "50051"
+//        DispatchQueue.main.async {
+//        }
         
         alert.addButton("OK") {
             completion(textField.text ?? "")
         }
         
         alert.addButton("Cancelar") {
-            ConnectionHandler.shared.disconnectSockets()
+            return
         }
         
         return alert.showEdit(title, subTitle: subtitle)

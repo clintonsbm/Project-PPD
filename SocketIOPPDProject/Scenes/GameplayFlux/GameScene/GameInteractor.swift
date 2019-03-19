@@ -22,11 +22,18 @@ protocol GameBusinessLogic {
 }
 
 protocol GameDataStore {
+    var client: NoteServiceServiceClient? { get set }
+    var clientName: String? { get set }
 }
 
 class GameInteractor: GameBusinessLogic, GameDataStore {
     var presenter: GamePresentationLogic?
     var worker: GameWorker?
+    
+    // MARK: DataStore
+    
+    var client: NoteServiceServiceClient?
+    var clientName: String?
     
     // MARK: Control variables
     
@@ -62,15 +69,15 @@ class GameInteractor: GameBusinessLogic, GameDataStore {
     // MARK: Setup for confirm deny
     
     func setupForConfirmDeny(request: Game.SetupForConfirmDenyResponse.Request) {
-        ConnectionHandler.shared.sendResponseToConfirm(response: request.confirmRound, andLettersToRemove: request.lettersToRemove)
-        
-        if request.confirmRound {
-            oponentLettersLeft = oponentLettersLeft - lettersToRemove.count
-            lettersToRemove = []
-        }
-        
-        let response = Game.SetupForConfirmDenyResponse.Response(confirmRound: request.confirmRound, lettersToRemove: request.lettersToRemove)
-        presenter?.presentSetupForConfirmDeny(response: response)
+//        ConnectionHandler.shared.sendResponseToConfirm(response: request.confirmRound, andLettersToRemove: request.lettersToRemove)
+//
+//        if request.confirmRound {
+//            oponentLettersLeft = oponentLettersLeft - lettersToRemove.count
+//            lettersToRemove = []
+//        }
+//
+//        let response = Game.SetupForConfirmDenyResponse.Response(confirmRound: request.confirmRound, lettersToRemove: request.lettersToRemove)
+//        presenter?.presentSetupForConfirmDeny(response: response)
     }
     
     // MARK: Response to confirm
@@ -83,13 +90,13 @@ class GameInteractor: GameBusinessLogic, GameDataStore {
     // MARK: Sort letter
     
     func sortLetter(request: Game.SortLetter.Request) {
-        let randomLetterIndex = Int.random(in: 0...25)
-        let letter = alphabet[randomLetterIndex]
-        
-        ConnectionHandler.shared.sendSort(letter: letter, andLetterIndex: randomLetterIndex)
-        
-        let response = Game.SortLetter.Response(letterIndex: randomLetterIndex, letter: letter)
-        presenter?.presentSortLetter(response: response)
+//        let randomLetterIndex = Int.random(in: 0...25)
+//        let letter = alphabet[randomLetterIndex]
+//        
+//        ConnectionHandler.shared.sendSort(letter: letter, andLetterIndex: randomLetterIndex)
+//        
+//        let response = Game.SortLetter.Response(letterIndex: randomLetterIndex, letter: letter)
+//        presenter?.presentSortLetter(response: response)
     }
     
     // MARK: Restart match

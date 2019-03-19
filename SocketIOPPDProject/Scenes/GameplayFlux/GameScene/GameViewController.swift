@@ -21,6 +21,17 @@ protocol GameDisplayLogic: class {
     func displayRestartMatch(viewModel: Game.RestartMatch.ViewModel)
 }
 
+protocol GameRemoteLogic: NSObjectProtocol {
+    func remove(letter: String)
+    func add(letter: String)
+    func confirmTurn()
+    func turnConfirmation(response: Bool, lettersToRemove: [String])
+    func sort(letter: String, letterIndex: Int)
+    func otherUserResign()
+    func otherUserWon()
+    func restartMatch()
+}
+
 class GameViewController: UIViewController {
     
     // MARK: Statics
@@ -97,24 +108,24 @@ class GameViewController: UIViewController {
     // MARK: Actions
     @objc
     func resignAction() {
-        RPCHandler.sharedOponent.disconnectSockets()
-        router?.goBack()
+//        RPCHandler.sharedOponent.disconnectSockets()
+//        router?.goBack()
     }
     
     @IBAction func clickAction(_ sender: UIButton) {
-        if sender.tintColor != .red {
-            RPCHandler.sharedOponent.remove(letter: sender.titleLabel!.text!)
-            sender.tintColor = .red
-            return
-        }
-        
-        RPCHandler.sharedOponent.add(letter: sender.titleLabel!.text!)
-        sender.tintColor = .defaultBlueButton
+//        if sender.tintColor != .red {
+//            RPCHandler.sharedOponent.remove(letter: sender.titleLabel!.text!)
+//            sender.tintColor = .red
+//            return
+//        }
+//
+//        RPCHandler.sharedOponent.add(letter: sender.titleLabel!.text!)
+//        sender.tintColor = .defaultBlueButton
     }
     
     @objc
     func endTurnAction() {
-        RPCHandler.sharedOponent.confirmTurn()
+//        RPCHandler.sharedOponent.confirmTurn()
     }
     
     @IBAction func turnRouletteAction(_ sender: UIButton) {
@@ -126,9 +137,9 @@ class GameViewController: UIViewController {
     // MARK: Initial preferences
     
     private func setupInitialPreferences() {
-        if RPCHandler.sharedOponent.getOponentsOponentUsername() != "1" {
-            changeButtonsIsEnable(to: false)
-        }
+//        if RPCHandler.sharedOponent.getOponentsOponentUsername() != "1" {
+//            changeButtonsIsEnable(to: false)
+//        }
     }
     
     // MARK: Is enables
@@ -161,53 +172,53 @@ class GameViewController: UIViewController {
     }
 }
 
-extension GameViewController: RPCGameDelegate {
-    func remove(letter: String?) {
-        let request = Game.LetterEvent.Request(isRemoveEvent: true, letter: letter)
-        interactor?.removeLetter(request: request)
-    }
-    
-    func add(letter: String?) {
-        let request = Game.LetterEvent.Request(isRemoveEvent: false, letter: letter)
-        interactor?.removeLetter(request: request)
-    }
-    
-    func confirmTurn() {
-        let request = Game.ConfirmTurn.Request()
-        interactor?.requestToConfirm(request: request)
-    }
-    
-    func turnConfirmation(response: Bool?, lettersToRemove: [String]?) {
-        let request = Game.TurnConfirmed.Request(confirmRound: response, lettersToRemove: lettersToRemove)
-        interactor?.responseToConfirm(request: request)
-    }
-    
-    func sort(letter: String?, letterIndex: Int?) {
-        guard let letter = letter, let index = letterIndex else { return }
-        animateRoulette(toIndex: index) {
-            self.selectedLetter.text = letter
-        }
-    }
-    
-    func otherUserResign() {
-        AlertHelper.showFinalAlert(didUserWon: true, didUserOtherResign: true) {
-            RPCHandler.sharedOponent.disconnectSockets()
-            self.router?.goBack()
-        }
-    }
-    
-    func otherUserWon() {
-        AlertHelper.showFinalAlert(didUserWon: false, didUserOtherResign: false) {
-            RPCHandler.sharedOponent.disconnectSockets()
-            self.router?.goBack()
-        }
-    }
-    
-    func restartMatch() {
-        let request = Game.RestartMatch.Request()
-        interactor?.restartMatch(request: request)
-    }
-}
+//extension GameViewController: RPCGameDelegate {
+//    func remove(letter: String?) {
+//        let request = Game.LetterEvent.Request(isRemoveEvent: true, letter: letter)
+//        interactor?.removeLetter(request: request)
+//    }
+//
+//    func add(letter: String?) {
+//        let request = Game.LetterEvent.Request(isRemoveEvent: false, letter: letter)
+//        interactor?.removeLetter(request: request)
+//    }
+//
+//    func confirmTurn() {
+//        let request = Game.ConfirmTurn.Request()
+//        interactor?.requestToConfirm(request: request)
+//    }
+//
+//    func turnConfirmation(response: Bool?, lettersToRemove: [String]?) {
+//        let request = Game.TurnConfirmed.Request(confirmRound: response, lettersToRemove: lettersToRemove)
+//        interactor?.responseToConfirm(request: request)
+//    }
+//
+//    func sort(letter: String?, letterIndex: Int?) {
+//        guard let letter = letter, let index = letterIndex else { return }
+//        animateRoulette(toIndex: index) {
+//            self.selectedLetter.text = letter
+//        }
+//    }
+//
+//    func otherUserResign() {
+//        AlertHelper.showFinalAlert(didUserWon: true, didUserOtherResign: true) {
+//            RPCHandler.sharedOponent.disconnectSockets()
+//            self.router?.goBack()
+//        }
+//    }
+//
+//    func otherUserWon() {
+//        AlertHelper.showFinalAlert(didUserWon: false, didUserOtherResign: false) {
+//            RPCHandler.sharedOponent.disconnectSockets()
+//            self.router?.goBack()
+//        }
+//    }
+//
+//    func restartMatch() {
+//        let request = Game.RestartMatch.Request()
+//        interactor?.restartMatch(request: request)
+//    }
+//}
 
 extension GameViewController: GameDisplayLogic {
     
@@ -245,32 +256,32 @@ extension GameViewController: GameDisplayLogic {
     // MARK: Response to confirm
     
     func displayResponseToConfirm(viewModel: Game.TurnConfirmed.ViewModel) {
-        if viewModel.confirmRound {
-            changeButtonsIsEnable(to: false)
-            var numberOfButtonsHidden: Int = 0
-            
-            for button in buttons {
-                if let buttonText = button.titleLabel?.text,
-                    viewModel.lettersToRemove.contains(buttonText) {
-                    button.isHidden = true
-                }
-                if button.isHidden {
-                    numberOfButtonsHidden += 1
-                }
-            }
-            
-            if numberOfButtonsHidden >= 26 {
-                ConnectionHandler.shared.sendCurrentUserWon()
-                AlertHelper.showFinalAlert(didUserWon: true, didUserOtherResign: false) {
-                    RPCHandler.sharedOponent.disconnectSockets()
-                    self.router?.goBack()
-                }
-            }
-            
-            return
-        }
-        
-        AlertHelper.showUserFeedbackAlert(confirmRound: false)
+//        if viewModel.confirmRound {
+//            changeButtonsIsEnable(to: false)
+//            var numberOfButtonsHidden: Int = 0
+//            
+//            for button in buttons {
+//                if let buttonText = button.titleLabel?.text,
+//                    viewModel.lettersToRemove.contains(buttonText) {
+//                    button.isHidden = true
+//                }
+//                if button.isHidden {
+//                    numberOfButtonsHidden += 1
+//                }
+//            }
+//            
+//            if numberOfButtonsHidden >= 26 {
+//                ConnectionHandler.shared.sendCurrentUserWon()
+//                AlertHelper.showFinalAlert(didUserWon: true, didUserOtherResign: false) {
+//                    RPCHandler.sharedOponent.disconnectSockets()
+//                    self.router?.goBack()
+//                }
+//            }
+//            
+//            return
+//        }
+//        
+//        AlertHelper.showUserFeedbackAlert(confirmRound: false)
     }
     
     // MARK: Sort letter

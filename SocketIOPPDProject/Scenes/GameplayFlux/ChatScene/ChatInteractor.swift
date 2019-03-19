@@ -11,15 +11,48 @@
 //
 
 import UIKit
+import SwiftGRPC
 
 protocol ChatBusinessLogic {
+    func sendMessage(request: Chat.SendMessage.Request)
+    func refreshMessages(reques: Chat.RefreshMessages.Request)
 }
 
 protocol ChatDataStore {
+    var client: NoteServiceServiceClient? { get set }
+    var clientName: String? { get set }
 }
 
 class ChatInteractor: ChatBusinessLogic, ChatDataStore {
     var presenter: ChatPresentationLogic?
     var worker: ChatWorker?
     
+    // MARK: DataStore
+    
+    var client: NoteServiceServiceClient?
+    var clientName: String?
+    
+    // MARK: Send message
+    
+    func sendMessage(request: Chat.SendMessage.Request) {
+        guard let username = clientName else {
+            let response = Chat.SendMessage.Response(success: false)
+            presenter?.presentSendMessage(response: response)
+            return
+        }
+        
+        _ = try? client?.insert(ChatMessage(user: username, content: request.message), completion: { (chatMessage, _) in
+            let response = Chat.SendMessage.Response(success: chatMessage != nil)
+            self.presenter?.presentSendMessage(response: response)
+        })
+    }
+    
+    // MARK: Refresh messages
+    
+    func refreshMessages(reques: Chat.RefreshMessages.Request) {
+        _ = try? client?.list(Empty(), completion: { (list, _) in
+            let response = Chat.RefreshMessages.Response(username: self.clientName, messages: list)
+            self.presenter?.presentRefreshMessages(response: response)
+        })
+    }
 }

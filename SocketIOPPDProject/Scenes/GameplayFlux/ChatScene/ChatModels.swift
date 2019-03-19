@@ -14,4 +14,30 @@ import UIKit
 
 enum Chat {
     
+    // MARK: Use cases
+    
+    enum SendMessage {
+        struct Request {
+            let message: String
+        }
+        struct Response {
+            let success: Bool
+        }
+        struct ViewModel {
+            let success: Bool
+        }
+    }
+    
+    enum RefreshMessages {
+        struct Request {
+        }
+        struct Response {
+            let username: String?
+            let messages: ChatMessageList?
+        }
+        struct ViewModel {
+            let messages: [Message]
+        }
+    }
+
 }

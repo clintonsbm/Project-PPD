@@ -16,16 +16,15 @@ enum MainMenu {
     
     // MARK: Use cases
     
-    enum ConnectionAccepted {
+    enum ConnectToNameServer {
         struct Request {
-            let playerUsername: String?
+            let portNumber: String
         }
         struct Response {
-            let playerUsername: String?
+            let username: String
         }
         struct ViewModel {
-            let isValidUsername: Bool
+            let username: String
         }
     }
-    
 }
