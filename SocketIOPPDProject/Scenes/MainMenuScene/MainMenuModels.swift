@@ -18,7 +18,7 @@ enum MainMenu {
     
     enum ConnectToNameServer {
         struct Request {
-            let portNumber: String
+            let addres: String
         }
         struct Response {
             let username: String

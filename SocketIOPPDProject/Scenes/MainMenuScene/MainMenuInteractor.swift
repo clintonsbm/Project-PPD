@@ -20,7 +20,6 @@ protocol MainMenuBusinessLogic {
 protocol MainMenuDataStore {
     var client: NoteServiceServiceClient? { get set }
     var clientName: String? { get set }
-//    var oponent: (RPCHandler & RPCChatDelegate)? { get set }
 }
 
 class MainMenuInteractor: MainMenuBusinessLogic, MainMenuDataStore {
@@ -35,7 +34,7 @@ class MainMenuInteractor: MainMenuBusinessLogic, MainMenuDataStore {
     // MARK: Connect to name server
     
     func connectToNameServer(request: MainMenu.ConnectToNameServer.Request) {
-        self.client = NoteServiceServiceClient(address: "127.0.0.1:\(request.portNumber)", secure: false)
+        self.client = NoteServiceServiceClient(address: request.addres, secure: false)
         
         _ = try? self.client?.username(Empty(), completion: { (chatMessageContainigUsername, _) in
             self.clientName = chatMessageContainigUsername?.content ?? ""

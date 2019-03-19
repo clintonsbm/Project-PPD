@@ -76,12 +76,12 @@ class AlertHelper: NSObject {
         let alert = SCLAlertView(appearance: appearance)
         
         let textField = alert.addTextField()
-        textField.placeholder = "50051"
+        textField.placeholder = "127.0.0.1:50051"
 //        DispatchQueue.main.async {
 //        }
         
         alert.addButton("OK") {
-            completion(textField.text ?? "")
+            completion(textField.text == "" ? "127.0.0.1:50051" : textField.text!)
         }
         
         alert.addButton("Cancelar") {

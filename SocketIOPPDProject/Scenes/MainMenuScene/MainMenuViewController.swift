@@ -80,8 +80,8 @@ class MainMenuViewController: UIViewController {
     // MARK: Actions
     
     @IBAction func searchForMatch(_ sender: Any) {        
-        AlertHelper.showFieldAlert(withTitle: "Iniciar partida", andSubtitle: "Iniciar partida com servidor de nomes na porta:") { (portNumber) in
-            let request = MainMenu.ConnectToNameServer.Request(portNumber: portNumber)
+        AlertHelper.showFieldAlert(withTitle: "Iniciar partida", andSubtitle: "Iniciar partida com servidor de nomes em:") { (address) in
+            let request = MainMenu.ConnectToNameServer.Request(addres: address)
             self.interactor?.connectToNameServer(request: request)
         }
     }
